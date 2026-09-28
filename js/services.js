@@ -43,10 +43,10 @@
 
   // Large cards in the "Signature rituals" section
   const rituals = Object.freeze([
-    { id: 'mireya', img: IMG + 'mireya-treatment-room.jpg', pos: '72% 50%' },
-    { id: 'hotstone', img: IMG + 'mireya-hot-stone.jpg', pos: '30% 50%' },
-    { id: 'couple', img: IMG + 'mireya-couple-suite.jpg', pos: '68% 50%' },
-    { id: 'aroma', img: IMG + 'mireya-oil-ritual.jpg', pos: '58% 50%' }
+    { id: 'mireya', img: IMG + 'mireya-treatment-room.jpg', pos: '50% 50%' },
+    { id: 'hotstone', img: IMG + 'mireya-hot-stone.jpg', pos: '8% 50%' },
+    { id: 'couple', img: IMG + 'mireya-couple-suite.jpg', pos: '50% 50%' },
+    { id: 'aroma', img: IMG + 'mireya-oil-ritual.jpg', pos: '76% 50%' }
   ]);
 
   const gallery = Object.freeze([
