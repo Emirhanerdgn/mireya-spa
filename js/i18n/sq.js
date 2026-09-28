@@ -57,7 +57,7 @@ window.MIREYA_I18N.sq = {
   'menu.cat.signature': 'Ekskluzive & Speciale',
   'menu.min': 'min',
   'menu.book': 'Zgjidh',
-  'menu.note': 'Çmimet janë në Euro (€). Na kontaktoni për karta dhuratë dhe paketa.',
+  'menu.note': 'Ju ndihmojmë të zgjidhni trajtimin dhe kohëzgjatjen e duhur; na shkruani në WhatsApp për detaje.',
 
   'journey.kicker': 'Përvoja',
   'journey.t1': 'Që nga momenti',

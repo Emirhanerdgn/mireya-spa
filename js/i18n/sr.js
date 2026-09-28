@@ -57,7 +57,7 @@ window.MIREYA_I18N.sr = {
   'menu.cat.signature': 'Ekskluzivne & posebne',
   'menu.min': 'min',
   'menu.book': 'Izaberi',
-  'menu.note': 'Cene su u evrima (€). Kontaktirajte nas za poklon kartice i pakete.',
+  'menu.note': 'Pomoći ćemo vam da izaberete pravi tretman i trajanje; pišite nam na WhatsApp za detalje.',
 
   'journey.kicker': 'Iskustvo',
   'journey.t1': 'Od trenutka',

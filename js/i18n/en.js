@@ -57,7 +57,7 @@ window.MIREYA_I18N.en = {
   'menu.cat.signature': 'Signature & Special',
   'menu.min': 'min',
   'menu.book': 'Select',
-  'menu.note': 'Prices are in Euro (€). Contact us for gift cards and packages.',
+  'menu.note': 'We will help you choose the right treatment and session length; message us on WhatsApp for details.',
 
   'journey.kicker': 'The Experience',
   'journey.t1': 'From the moment',

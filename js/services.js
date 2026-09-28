@@ -57,7 +57,6 @@
     { src: IMG + 'mireya-lounge-robe.jpg', key: 'gallery.relax' },
     { src: IMG + 'mireya-oil-ritual.jpg', key: 'gallery.oils' },
     { src: IMG + 'mireya-reception.jpg', key: 'gallery.reception', tall: true },
-    { src: IMG + 'mireya-facade.jpg', key: 'gallery.facade' },
     { src: IMG + 'mireya-lounge.jpg', key: 'gallery.lounge' }
   ]);
 

@@ -57,7 +57,7 @@ window.MIREYA_I18N.tr = {
   'menu.cat.signature': 'Özel & İmza',
   'menu.min': 'dk',
   'menu.book': 'Seç',
-  'menu.note': 'Fiyatlar Euro (€) cinsindendir. Hediye kartı ve paketler için bize ulaşın.',
+  'menu.note': 'Size en uygun masajı ve seans süresini birlikte belirleyelim; bilgi için WhatsApp’tan yazın.',
 
   'journey.kicker': 'Deneyim',
   'journey.t1': 'Kapıdan girdiğiniz',

@@ -67,8 +67,8 @@
           el('span', { class: 'rc-idx', text: String(i + 1).padStart(2, '0') }),
           el('h3', { text: svcName(r.id) }),
           el('p', { class: 'rc-desc', text: svcDesc(r.id) }),
-          el('div', { class: 'rc-meta' }, [
-            el('span', { text: s.durations.map((d) => d).join(' / ') + ' ' + t('menu.min') }),
+          CONFIG.showPricing && el('div', { class: 'rc-meta' }, [
+            el('span', { text: s.durations.join(' / ') + ' ' + t('menu.min') }),
             el('strong', { text: fromPrice(s) })
           ]),
           el('button', { class: 'rc-btn', type: 'button', onclick: () => selectService(r.id) }, [
@@ -115,12 +115,12 @@
     }, [
       el('div', { class: 'mi-head' }, [
         el('h3', { text: svcName(s.id) }),
-        el('span', { class: 'mi-leader', 'aria-hidden': 'true' }),
-        el('span', { class: 'mi-price', text: fromPrice(s) })
+        CONFIG.showPricing && el('span', { class: 'mi-leader', 'aria-hidden': 'true' }),
+        CONFIG.showPricing && el('span', { class: 'mi-price', text: fromPrice(s) })
       ]),
       el('p', { class: 'mi-desc', text: svcDesc(s.id) }),
       el('div', { class: 'mi-foot' }, [
-        el('ul', { class: 'mi-options' }, options),
+        CONFIG.showPricing ? el('ul', { class: 'mi-options' }, options) : el('span'),
         el('button', { class: 'mi-book', type: 'button', onclick: () => selectService(s.id) }, [
           el('span', { text: t('menu.book') }), icon('i-arrow')
         ])

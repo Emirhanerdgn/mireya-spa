@@ -41,13 +41,18 @@
     return R.el('option', { value: '', disabled: true, text: t(key) });
   }
 
+  function serviceOptions(s) {
+    if (!CONFIG.showPricing) return [R.el('option', { value: s.id, text: R.svcName(s.id) })];
+    return s.durations.map((d, i) => R.el('option', {
+      value: s.id + '|' + d,
+      text: R.svcName(s.id) + ' — ' + R.minutes(d) + ' · ' + R.price(s.prices[i])
+    }));
+  }
+
   function fillServices() {
     const prev = serviceSelect.value;
     const groups = DATA.categories.map((cat) => R.el('optgroup', { label: t('menu.cat.' + cat) },
-      DATA.services.filter((s) => s.cat === cat).flatMap((s) => s.durations.map((d, i) => R.el('option', {
-        value: s.id + '|' + d,
-        text: R.svcName(s.id) + ' — ' + R.minutes(d) + ' · ' + R.price(s.prices[i])
-      })))
+      DATA.services.filter((s) => s.cat === cat).flatMap(serviceOptions)
     ));
     serviceSelect.replaceChildren(placeholderOption('book.servicePh'), ...groups);
     serviceSelect.value = prev || '';
@@ -114,6 +119,7 @@
     const [id, dur] = value.split('|');
     const s = R.findService(id);
     if (!s) return value;
+    if (!CONFIG.showPricing || !dur) return R.svcName(id);
     const idx = s.durations.indexOf(Number(dur));
     return R.svcName(id) + ' — ' + R.minutes(dur) + (idx >= 0 ? ' · ' + R.price(s.prices[idx]) : '');
   }
@@ -181,7 +187,7 @@
   function onSelectService(e) {
     const s = R.findService(e.detail.id);
     if (!s) return;
-    serviceSelect.value = s.id + '|' + s.durations[0];
+    serviceSelect.value = CONFIG.showPricing ? s.id + '|' + s.durations[0] : s.id;
     setError(serviceSelect, '');
     document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
   }
