@@ -27,9 +27,9 @@
     { id: 'shiatsu', cat: 'eastern', durations: [60], prices: [40], img: 'mireya-treatment-room.jpg' },
     { id: 'lomi', cat: 'eastern', durations: [60, 90], prices: [45, 60], img: 'mireya-oil-ritual.jpg' },
     { id: 'aroma', cat: 'eastern', durations: [60, 90], prices: [38, 52], img: 'mireya-oil-ritual.jpg' },
-    { id: 'hotstone', cat: 'eastern', durations: [75], prices: [50], img: 'mireya-hot-stone.jpg' },
-    { id: 'bamboo', cat: 'eastern', durations: [60], prices: [45], img: 'mireya-hot-stone.jpg' },
-    { id: 'cupping', cat: 'eastern', durations: [45], prices: [35], img: 'mireya-hot-stone.jpg' },
+    { id: 'hotstone', cat: 'eastern', durations: [75], prices: [50], img: 'mireya-hot-stone-therapy.jpg' },
+    { id: 'bamboo', cat: 'eastern', durations: [60], prices: [45], img: 'mireya-hot-stone-therapy.jpg' },
+    { id: 'cupping', cat: 'eastern', durations: [45], prices: [35], img: 'mireya-hot-stone-therapy.jpg' },
 
     // Signature & special
     { id: 'mireya', cat: 'signature', durations: [120], prices: [90], img: 'mireya-treatment-room.jpg', featured: true },
@@ -44,7 +44,7 @@
   // Large cards in the "Signature rituals" section
   const rituals = Object.freeze([
     { id: 'mireya', img: IMG + 'mireya-treatment-room.jpg', pos: '50% 50%' },
-    { id: 'hotstone', img: IMG + 'mireya-hot-stone.jpg', pos: '8% 50%' },
+    { id: 'hotstone', img: IMG + 'mireya-hot-stone-therapy.jpg', pos: '30% 50%' },
     { id: 'couple', img: IMG + 'mireya-couple-suite.jpg', pos: '50% 50%' },
     { id: 'aroma', img: IMG + 'mireya-oil-ritual.jpg', pos: '76% 50%' }
   ]);
@@ -53,7 +53,7 @@
     { src: IMG + 'mireya-towel-massage.jpg', key: 'gallery.candles', tall: true },
     { src: IMG + 'mireya-treatment-room.jpg', key: 'gallery.room' },
     { src: IMG + 'mireya-couple-suite.jpg', key: 'gallery.couple' },
-    { src: IMG + 'mireya-hot-stone.jpg', key: 'gallery.stones' },
+    { src: IMG + 'mireya-hot-stone-therapy.jpg', key: 'gallery.stones' },
     { src: IMG + 'mireya-lounge-robe.jpg', key: 'gallery.relax' },
     { src: IMG + 'mireya-oil-ritual.jpg', key: 'gallery.oils' },
     { src: IMG + 'mireya-reception.jpg', key: 'gallery.reception', tall: true },
