@@ -182,6 +182,9 @@ figure { margin: 0; }
 
 /* ---------- Brand ---------- */
 .brand { display: flex; align-items: center; gap: 0.85rem; }
+.brand-logo { height: 52px; width: auto; transition: height var(--dur) var(--ease-out); }
+.site-header.is-solid .brand-logo { height: 44px; }
+.footer-logo { width: min(280px, 70vw); height: auto; }
 .brand-mono, .footer-mono {
   position: relative;
   font-family: var(--script);
@@ -309,6 +312,7 @@ figure { margin: 0; }
   .header-actions { gap: 0.4rem; }
 }
 @media (max-width: 420px) {
+  .brand-logo, .site-header.is-solid .brand-logo { height: 40px; }
   .brand { gap: 0.5rem; }
   .brand-name { font-size: 1rem; letter-spacing: 0.18em; }
   .brand-mono { font-size: 2rem; padding-right: 0.35rem; }
