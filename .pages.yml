@@ -47,6 +47,10 @@ content:
       - name: hoursWeekend
         label: "Çalışma saatleri – hafta sonu"
         type: string
+      - name: bookingCalendarUrl
+        label: "Google Takvim randevu sayfası"
+        type: text
+        description: "Google Takvim > Randevu planı > Paylaş > Web sitesi yerleştirme kodunu ya da linkini yapıştırın. Boş bırakılırsa WhatsApp formu görünür."
       - name: bookingOpen
         label: "Randevu ilk saat"
         type: string

@@ -99,6 +99,7 @@ window.MIREYA_I18N.tr = {
   'book.t1': 'Zamanınızı',
   'book.t2': 'ayıralım',
   'book.lead': 'Formu doldurun, talebiniz WhatsApp üzerinden bize ulaşsın. Onay için en kısa sürede dönüş yapıyoruz.',
+  'book.leadCal': 'Size uygun gün ve saati seçin; randevunuz anında takvimimize işlenir ve e-postanıza onay gelir.',
   'book.name': 'Ad Soyad',
   'book.phone': 'Telefon',
   'book.service': 'Hizmet',

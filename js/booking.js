@@ -6,12 +6,44 @@
   const R = window.MireyaRender;
   const t = (k) => I18N.t(k);
 
+  // Google Calendar appointment page: replaces the form when set in the panel
+  function calendarEmbedUrl(raw) {
+    const m = String(raw || '').match(/https:\/\/(calendar\.google\.com\/calendar\/appointments\/[^"'\s<>]+|calendar\.app\.google\/[^"'\s<>]+)/);
+    if (!m) return '';
+    const url = new URL(m[0].replace(/&amp;/g, '&'));
+    if (url.hostname === 'calendar.google.com') url.searchParams.set('gv', 'true');
+    return url.toString();
+  }
+
+  function showCalendar() {
+    const src = calendarEmbedUrl(CONFIG.bookingCalendarUrl);
+    const box = document.querySelector('[data-booking-calendar]');
+    if (!src || !box) return false;
+    box.replaceChildren(R.el('iframe', { src, title: 'Mireya — online booking', loading: 'lazy' }));
+    box.hidden = false;
+    document.querySelector('[data-booking-form]').hidden = true;
+    const lead = document.querySelector('[data-booking-lead]');
+    if (lead) lead.dataset.i18n = 'book.leadCal';
+    document.addEventListener('mireya:lang', () => {
+      document.querySelectorAll('[data-wa-link]').forEach((a) => {
+        const num = String(CONFIG.whatsappNumber || '').replace(/\D/g, '');
+        a.href = num ? 'https://wa.me/' + num : '#contact';
+        if (num) a.target = '_blank';
+      });
+    });
+    document.addEventListener('mireya:select-service', () => {
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    });
+    return true;
+  }
+
   const PHONE_RE = /^\+?[0-9\s\-().]{7,20}$/;
   const MIN_PHONE_DIGITS = 7;
   const SLOT_MINUTES = 30;
 
   const form = document.querySelector('[data-booking-form]');
   if (!form) return;
+  if (showCalendar()) return;
   const serviceSelect = form.querySelector('[data-service-select]');
   const timeSelect = form.querySelector('[data-time-select]');
   const status = form.querySelector('[data-form-status]');

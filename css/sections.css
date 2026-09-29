@@ -265,6 +265,9 @@
   border: 1px solid var(--line);
   box-shadow: var(--shadow-deep);
 }
+.booking-calendar { background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-deep); overflow: hidden; }
+.booking-calendar iframe { display: block; width: 100%; height: 760px; border: 0; }
+@media (max-width: 600px) { .booking-calendar iframe { height: 900px; } }
 .full { grid-column: 1 / -1; }
 .field { display: flex; flex-direction: column; min-width: 0; }
 .field label, .field legend { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }

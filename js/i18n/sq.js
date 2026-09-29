@@ -99,6 +99,7 @@ window.MIREYA_I18N.sq = {
   'book.t1': 'Le ta rezervojmë',
   'book.t2': 'kohën tuaj',
   'book.lead': 'Plotësoni formularin dhe kërkesa juaj na arrin përmes WhatsApp. E konfirmojmë sa më shpejt.',
+  'book.leadCal': 'Zgjidhni ditën dhe orën që ju përshtaten; rezervimi regjistrohet menjëherë në kalendarin tonë dhe merrni konfirmim me email.',
   'book.name': 'Emri dhe mbiemri',
   'book.phone': 'Telefoni',
   'book.service': 'Trajtimi',

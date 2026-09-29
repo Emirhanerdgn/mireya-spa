@@ -99,6 +99,7 @@ window.MIREYA_I18N.sr = {
   'book.t1': 'Rezervišimo',
   'book.t2': 'vaše vreme',
   'book.lead': 'Popunite formular i vaš zahtev stiže do nas preko WhatsApp-a. Potvrđujemo u najkraćem roku.',
+  'book.leadCal': 'Izaberite dan i vreme koji vam odgovaraju; rezervacija odmah ulazi u naš kalendar, a potvrdu dobijate e-poštom.',
   'book.name': 'Ime i prezime',
   'book.phone': 'Telefon',
   'book.service': 'Tretman',

@@ -99,6 +99,7 @@ window.MIREYA_I18N.en = {
   'book.t1': 'Let us reserve',
   'book.t2': 'your time',
   'book.lead': 'Fill in the form and your request reaches us via WhatsApp. We confirm as quickly as possible.',
+  'book.leadCal': 'Pick the day and time that suit you; your booking goes straight into our calendar and you receive an email confirmation.',
   'book.name': 'Full name',
   'book.phone': 'Phone',
   'book.service': 'Treatment',

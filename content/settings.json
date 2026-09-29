@@ -12,5 +12,6 @@
   "bookingClose": "22:00",
   "showPricing": false,
   "googleMapsCid": "11214839970247590779",
-  "googleReviewUrl": ""
+  "googleReviewUrl": "",
+  "bookingCalendarUrl": ""
 }
