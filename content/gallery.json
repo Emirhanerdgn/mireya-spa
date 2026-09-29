@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "caption": {
+        "sq": "Gjatë terapisë",
+        "sr": "Tokom terapije",
+        "en": "In therapy",
+        "tr": "Terapi anı"
+      },
+      "tall": true
+    },
+    {
+      "image": "/assets/img/mireya-treatment-room.jpg",
+      "caption": {
+        "sq": "Dhoma e terapisë",
+        "sr": "Soba za terapiju",
+        "en": "Treatment room",
+        "tr": "Terapi odası"
+      },
+      "tall": false
+    },
+    {
+      "image": "/assets/img/mireya-couple-suite.jpg",
+      "caption": {
+        "sq": "Suita për çifte",
+        "sr": "Apartman za parove",
+        "en": "Couples’ suite",
+        "tr": "Çift masajı süiti"
+      },
+      "tall": false
+    },
+    {
+      "image": "/assets/img/mireya-hot-stone-therapy.jpg",
+      "caption": {
+        "sq": "Terapi me gurë të nxehtë",
+        "sr": "Terapija vrelim kamenjem",
+        "en": "Hot stone therapy",
+        "tr": "Sıcak taş terapisi"
+      },
+      "tall": false
+    },
+    {
+      "image": "/assets/img/mireya-lounge-robe.jpg",
+      "caption": {
+        "sq": "Pas seancës",
+        "sr": "Posle tretmana",
+        "en": "After your session",
+        "tr": "Seans sonrası"
+      },
+      "tall": false
+    },
+    {
+      "image": "/assets/img/mireya-oil-ritual.jpg",
+      "caption": {
+        "sq": "Vajra aromatike",
+        "sr": "Aromatična ulja",
+        "en": "Aromatic oils",
+        "tr": "Aromatik yağlar"
+      },
+      "tall": false
+    },
+    {
+      "image": "/assets/img/mireya-reception.jpg",
+      "caption": {
+        "sq": "Recepsioni",
+        "sr": "Recepcija",
+        "en": "Reception",
+        "tr": "Resepsiyon"
+      },
+      "tall": true
+    },
+    {
+      "image": "/assets/img/mireya-lounge.jpg",
+      "caption": {
+        "sq": "Salla e relaksimit",
+        "sr": "Salon za opuštanje",
+        "en": "Relaxation lounge",
+        "tr": "Dinlenme salonu"
+      },
+      "tall": false
+    }
+  ]
+}

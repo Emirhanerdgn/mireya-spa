@@ -8,17 +8,19 @@ python -m http.server 8944 --directory mireya-spa
 ```
 Tarayıcıda `http://localhost:8944` adresini açın. Dil seçmek için `?lang=sq|sr|en|tr` ekleyebilirsiniz.
 
-## Nereyi düzenlemeli?
-| Ne | Dosya |
-|---|---|
-| WhatsApp, telefon, adres, çalışma saatleri, Instagram, harita | `js/config.js` |
-| Masaj listesi, süre ve fiyatlar, galeri, yorumlar | `js/services.js` |
-| Metinler ve çeviriler | `js/i18n/sq.js`, `sr.js`, `en.js`, `tr.js` |
-| Görseller | `assets/img/` |
+## Düzenleme paneli
+İçerik [Pages CMS](https://app.pagescms.org) panelinden düzenlenir. Panel ayarı `.pages.yml` dosyasındadır, içerik ise `content/` klasöründeki JSON dosyalarındadır:
 
-- `config.js` içinde boş bırakılan alanlar sitede "Yakında" olarak görünür.
-- `whatsappNumber` doldurulduğunda form, WhatsApp'a hazır bir mesaj açar. `formEndpoint` (Formspree vb.) doldurulursa form oraya gönderilir.
-- Bir masajı kaldırmak için `services.js` içindeki satırını silin. Çeviri anahtarları kalabilir.
+| Panel bölümü | Dosya |
+|---|---|
+| İletişim ve Ayarlar (telefon, WhatsApp, adres, saatler, fiyat göster/gizle) | `content/settings.json` |
+| Ana Sayfa Görselleri (giriş fotoğrafı/videosu, hakkımızda, randevu) | `content/images.json` |
+| Masajlar (4 dilde ad/açıklama, fotoğraf, ritüel kartı, süre/fiyat) | `content/services.json` |
+| Galeri | `content/gallery.json` |
+| Yorumlar | `content/reviews.json` |
+| Sayfa Metinleri (giriş ve hakkımızda, 4 dil) | `content/texts.json` |
+
+Diğer arayüz metinleri `js/i18n/*.js`, teknik varsayılanlar `js/config.js` içindedir. `js/boot.js` içeriği yükleyip siteyi başlatır.
 
 ## Geçici içerik (yayından önce değiştirilecek)
 - `stock-*.jpg` görselleri Unsplash stok fotoğraflarıdır. Gerçek salon fotoğraflarıyla değiştirin (aynı dosya adıyla).

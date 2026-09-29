@@ -1,0 +1,41 @@
+{
+  "showSampleNote": true,
+  "items": [
+    {
+      "name": "Arta K.",
+      "language": "SQ",
+      "stars": 5,
+      "text": "Ambient i mrekullueshëm dhe staf shumë profesional. Masazhi me gurë të nxehtë ishte përvoja më relaksuese që kam pasur ndonjëherë. Do të kthehem patjetër!"
+    },
+    {
+      "name": "Milica S.",
+      "language": "SR",
+      "stars": 5,
+      "text": "Prelep prostor, sve je besprekorno čisto, a terapeutkinja je znala tačno gde je napetost. Aromaterapija je bila pravi odmor za telo i dušu."
+    },
+    {
+      "name": "Sarah M.",
+      "language": "EN",
+      "stars": 5,
+      "text": "An absolute gem. From the warm welcome at the reception to the signature ritual, every detail felt thoughtful and luxurious. Best massage I have had in the Balkans."
+    },
+    {
+      "name": "Blerim H.",
+      "language": "SQ",
+      "stars": 5,
+      "text": "Masazh sportiv i shkëlqyer pas stërvitjes. Terapisti e kuptoi menjëherë çfarë më duhej. Rekomandim i sinqertë."
+    },
+    {
+      "name": "Nikola P.",
+      "language": "SR",
+      "stars": 5,
+      "text": "Rezervisao sam masažu za parove za godišnjicu — atmosfera, muzika i ulja su bili savršeni. Toplo preporučujem."
+    },
+    {
+      "name": "James T.",
+      "language": "EN",
+      "stars": 5,
+      "text": "Quiet, elegant and spotless. The deep tissue massage finally released my shoulders after a long flight. Booking via WhatsApp was effortless."
+    }
+  ]
+}

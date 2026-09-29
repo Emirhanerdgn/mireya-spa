@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap">
   <link rel="preload" as="image" href="assets/img/mireya-reception.jpg">
-  <link rel="stylesheet" href="css/base.css?v=16">
-  <link rel="stylesheet" href="css/sections.css?v=16">
+  <link rel="stylesheet" href="css/base.css?v=17">
+  <link rel="stylesheet" href="css/sections.css?v=17">
 </head>
 <body id="top">
   <!-- Icon sprite -->
@@ -88,7 +88,7 @@
         <div class="hero-visual rise">
           <div class="arch-outline" aria-hidden="true"></div>
           <figure class="arch hero-arch">
-            <img src="assets/img/mireya-reception.jpg" alt="Mireya reception" width="1086" height="1448" fetchpriority="high">
+            <img src="assets/img/mireya-reception.jpg" data-img="heroImage" alt="Mireya reception" width="1086" height="1448" fetchpriority="high">
           </figure>
           <div class="hero-badge">
             <span class="badge-mono" aria-hidden="true">M</span>
@@ -106,8 +106,8 @@
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
         <div class="about-media reveal">
-          <figure class="about-img-main"><img src="assets/img/mireya-treatment-room.jpg" alt="Mireya treatment room" width="1024" height="687" loading="lazy"></figure>
-          <figure class="about-img-sub"><img src="assets/img/mireya-lounge-robe.jpg" alt="Mireya lounge" width="1024" height="687" loading="lazy"></figure>
+          <figure class="about-img-main"><img data-img="aboutMain" src="assets/img/mireya-treatment-room.jpg" alt="Mireya treatment room" width="1024" height="687" loading="lazy"></figure>
+          <figure class="about-img-sub"><img data-img="aboutSub" src="assets/img/mireya-lounge-robe.jpg" alt="Mireya lounge" width="1024" height="687" loading="lazy"></figure>
           <div class="slat-panel" aria-hidden="true"></div>
         </div>
         <div class="about-copy">
@@ -210,7 +210,7 @@
           <h2 id="booking-title" class="title reveal"><span data-i18n="book.t1"></span> <em class="gold-text" data-i18n="book.t2"></em></h2>
           <p class="reveal" data-i18n="book.lead"></p>
           <a class="btn btn-wa reveal" href="#" data-wa-link target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg><span data-i18n="book.direct"></span></a>
-          <figure class="booking-img reveal"><img src="assets/img/mireya-couple-suite.jpg" alt="" width="1024" height="687" loading="lazy"></figure>
+          <figure class="booking-img reveal"><img data-img="bookingImage" src="assets/img/mireya-couple-suite.jpg" alt="" width="1024" height="687" loading="lazy"></figure>
         </div>
 
         <form class="booking-form reveal" novalidate data-booking-form>
@@ -322,15 +322,7 @@
     <button class="lb-nav next round-btn" type="button" data-lb-next data-i18n-aria="gallery.next"><svg class="ico"><use href="#i-arrow"/></svg></button>
   </dialog>
 
-  <script src="js/config.js?v=16"></script>
-  <script src="js/services.js?v=16"></script>
-  <script src="js/i18n/sq.js?v=16"></script>
-  <script src="js/i18n/sr.js?v=16"></script>
-  <script src="js/i18n/en.js?v=16"></script>
-  <script src="js/i18n/tr.js?v=16"></script>
-  <script src="js/i18n.js?v=16"></script>
-  <script src="js/render.js?v=16"></script>
-  <script src="js/booking.js?v=16"></script>
-  <script src="js/main.js?v=16"></script>
+  <script src="js/config.js?v=17"></script>
+  <script src="js/boot.js?v=17"></script>
 </body>
 </html>

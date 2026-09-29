@@ -1,0 +1,652 @@
+{
+  "services": [
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh suedez",
+        "sr": "Švedska masaža",
+        "en": "Swedish Massage",
+        "tr": "İsveç Masajı"
+      },
+      "description": {
+        "sq": "Masazhi klasik i gjithë trupit me lëvizje të gjata e të rrjedhshme — përmirëson qarkullimin dhe largon stresin.",
+        "sr": "Klasična masaža celog tela dugim, tečnim pokretima — poboljšava cirkulaciju i uklanja stres.",
+        "en": "The classic full-body massage with long, flowing strokes — boosts circulation and melts stress.",
+        "tr": "Uzun, akıcı hareketlerle tüm vücudu gevşeten klasik masaj; dolaşımı hızlandırır, stresi alır."
+      },
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 30,
+          "price": 20
+        },
+        {
+          "minutes": 60,
+          "price": 35
+        },
+        {
+          "minutes": 90,
+          "price": 50
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh i indeve të thella",
+        "sr": "Masaža dubokog tkiva",
+        "en": "Deep Tissue Massage",
+        "tr": "Derin Doku Masajı"
+      },
+      "description": {
+        "sq": "Presion i fortë në shtresat e thella të muskujve për tensionin kronik dhe nyjet.",
+        "sr": "Snažan pritisak na dublje slojeve mišića za hroničnu napetost i čvorove.",
+        "en": "Firm, focused pressure on deeper muscle layers to release chronic tension and knots.",
+        "tr": "Kronik gerginlik ve düğümler için derin kas katmanlarına yönelik yoğun baskılı terapi."
+      },
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        },
+        {
+          "minutes": 90,
+          "price": 55
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh terapeutik mjekësor",
+        "sr": "Medicinska terapeutska masaža",
+        "en": "Medical Therapy Massage",
+        "tr": "Medikal Terapi Masajı"
+      },
+      "description": {
+        "sq": "Trajtim i fokusuar në dhimbjet e shpinës, qafës dhe kyçeve për çlirimin e muskujve.",
+        "sr": "Terapija usmerena na bolove u leđima, vratu i zglobovima radi opuštanja mišića.",
+        "en": "Therapeutic work targeting back, neck and joint pain to relax and restore the muscles.",
+        "tr": "Bel, boyun ve eklem ağrılarına odaklanan, kasları gevşeten tedavi amaçlı masaj."
+      },
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 45,
+          "price": 35
+        },
+        {
+          "minutes": 60,
+          "price": 45
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh sportiv",
+        "sr": "Sportska masaža",
+        "en": "Sports Massage",
+        "tr": "Spor Masajı"
+      },
+      "description": {
+        "sq": "Teknika stimuluese për përgatitje para stërvitjes dhe rikuperim pas saj.",
+        "sr": "Stimulativne tehnike za pripremu pre treninga i oporavak posle njega.",
+        "en": "Stimulating techniques for pre-training preparation and post-workout recovery.",
+        "tr": "Antrenman öncesi hazırlık ve sonrası toparlanma için esnekliği artıran uyarıcı teknikler."
+      },
+      "image": "/assets/img/stock-sports.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Shpina, qafa & supet",
+        "sr": "Leđa, vrat & ramena",
+        "en": "Back, Neck & Shoulders",
+        "tr": "Sırt, Boyun & Omuz"
+      },
+      "description": {
+        "sq": "Ideal për lodhjen nga puna në zyrë: seancë e shkurtër për tensionin e pjesës së sipërme.",
+        "sr": "Idealno za umor od rada za stolom: kratak, ciljani tretman gornjeg dela tela.",
+        "en": "Made for desk fatigue: a short, targeted session for upper-body tension.",
+        "tr": "Masa başı yorgunluğuna birebir: üst vücuttaki gerginliğe hedefli kısa seans."
+      },
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 30,
+          "price": 20
+        },
+        {
+          "minutes": 45,
+          "price": 28
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Refleksologji",
+        "sr": "Refleksologija",
+        "en": "Reflexology",
+        "tr": "Refleksoloji"
+      },
+      "description": {
+        "sq": "Presion në pikat refleksive të shputave për të balancuar gjithë trupin.",
+        "sr": "Pritisak na refleksne tačke stopala koji uravnotežuje celo telo.",
+        "en": "Pressure on reflex points of the feet to rebalance the whole body.",
+        "tr": "Ayak tabanındaki refleks noktalarına baskı ile tüm bedeni dengeleyen rahatlatıcı terapi."
+      },
+      "image": "/assets/img/stock-reflexology.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 30,
+          "price": 20
+        },
+        {
+          "minutes": 45,
+          "price": 28
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh indian i kokës",
+        "sr": "Indijska masaža glave",
+        "en": "Indian Head Massage",
+        "tr": "Hint Baş Masajı"
+      },
+      "description": {
+        "sq": "Koka, lëkura e kokës, fytyra dhe qafa — qetëson mendjen dhe lehtëson dhimbjen e kokës.",
+        "sr": "Glava, teme, lice i vrat — smiruje um i ublažava glavobolju.",
+        "en": "Head, scalp, face and neck — calms the mind and eases headaches.",
+        "tr": "Baş, saç derisi, yüz ve boyun için zihni sakinleştiren, baş ağrısını hafifleten ritüel."
+      },
+      "image": "/assets/img/stock-head-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 30,
+          "price": 20
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Drenazh limfatik",
+        "sr": "Limfna drenaža",
+        "en": "Lymphatic Drainage",
+        "tr": "Lenf Drenajı"
+      },
+      "description": {
+        "sq": "Teknikë e butë dhe ritmike që ul ënjtjet dhe mbështet imunitetin.",
+        "sr": "Nežna, ritmična manuelna tehnika koja smanjuje otoke i jača imunitet.",
+        "en": "Gentle, rhythmic manual technique that reduces swelling and supports immunity.",
+        "tr": "Ödem ve şişkinliği azaltan, bağışıklığı destekleyen hafif ve ritmik manuel teknik."
+      },
+      "image": "/assets/img/mireya-treatment-room.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 45
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "classic",
+      "name": {
+        "sq": "Masazh anticelulit",
+        "sr": "Anticelulit masaža",
+        "en": "Anti-Cellulite Massage",
+        "tr": "Anti-Selülit Masajı"
+      },
+      "description": {
+        "sq": "Masazh intensiv lokal që rrit qarkullimin dhe mbështet elasticitetin e lëkurës.",
+        "sr": "Intenzivna lokalna masaža koja pojačava cirkulaciju i čvrstinu kože.",
+        "en": "Intensive local massage that boosts circulation and supports skin firmness.",
+        "tr": "Dolaşımı artırıp cildin sıkılığını ve görünümünü destekleyen yoğun bölgesel masaj."
+      },
+      "image": "/assets/img/mireya-towel-massage.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 45,
+          "price": 35
+        },
+        {
+          "minutes": 60,
+          "price": 45
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Masazh tajlandez",
+        "sr": "Tajlandska masaža",
+        "en": "Thai Massage",
+        "tr": "Thai Masajı"
+      },
+      "description": {
+        "sq": "Traditë shekullore: shtrirje pasive dhe presion ritmik përgjatë linjave energjetike.",
+        "sr": "Vekovna tradicija: pasivno istezanje i ritmičan pritisak duž energetskih linija.",
+        "en": "Centuries-old Thai tradition: passive stretches and rhythmic pressure along energy lines.",
+        "tr": "Yüzyıllık Tayland geleneği: pasif esnetmeler ve enerji hatları boyunca ritmik baskılar."
+      },
+      "image": "/assets/img/stock-thai.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        },
+        {
+          "minutes": 90,
+          "price": 55
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Masazh balinez",
+        "sr": "Balijska masaža",
+        "en": "Balinese Massage",
+        "tr": "Bali Masajı"
+      },
+      "description": {
+        "sq": "Akupresurë, shtrirje dhe vajra aromatike për ekuilibrin e trupit dhe mendjes.",
+        "sr": "Akupresura, istezanje i aromatična ulja za ravnotežu tela i uma.",
+        "en": "Acupressure, stretching and aromatic oils combined to balance body and mind.",
+        "tr": "Akupresür, esnetme ve aromatik yağları birleştiren, zihni ve bedeni dengeleyen masaj."
+      },
+      "image": "/assets/img/mireya-oil-ritual.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        },
+        {
+          "minutes": 90,
+          "price": 55
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Shiatsu kundër stresit",
+        "sr": "Antistres šijacu",
+        "en": "Anti-Stress Shiatsu",
+        "tr": "Anti-Stres Shiatsu"
+      },
+      "description": {
+        "sq": "Teknikë japoneze me presion gishtash që ul stresin dhe rikthen ekuilibrin natyror.",
+        "sr": "Japanska tehnika pritiska prstima koja smanjuje stres i vraća prirodnu ravnotežu.",
+        "en": "Japanese finger-pressure technique that lowers stress and restores natural balance.",
+        "tr": "Japon parmak baskısı tekniği; stresi azaltır, bedenin doğal dengesini yeniden kurar."
+      },
+      "image": "/assets/img/mireya-treatment-room.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Lomi Lomi",
+        "sr": "Lomi Lomi",
+        "en": "Lomi Lomi",
+        "tr": "Lomi Lomi"
+      },
+      "description": {
+        "sq": "Lëvizje havajane si valë me parakrah për një relaksim të thellë.",
+        "sr": "Havajski talasasti pokreti podlakticama za duboko opuštanje.",
+        "en": "Hawaiian wave-like forearm strokes for a deeply relaxed state.",
+        "tr": "Hawaii’nin dalga gibi akan ön kol hareketleriyle derin bir gevşeme hali."
+      },
+      "image": "/assets/img/mireya-oil-ritual.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 45
+        },
+        {
+          "minutes": 90,
+          "price": 60
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Masazh me aromaterapi",
+        "sr": "Aromaterapeutska masaža",
+        "en": "Aromatherapy Massage",
+        "tr": "Aromaterapi Masajı"
+      },
+      "description": {
+        "sq": "Masazh i ngadaltë e qetësues me vajra esencialë të përzier posaçërisht për ju.",
+        "sr": "Spora, umirujuća masaža čistim eteričnim uljima pomešanim samo za vas.",
+        "en": "A slow, soothing massage with pure essential oils blended just for you.",
+        "tr": "Size özel harmanlanan saf esansiyel yağlarla yavaş tempolu, huzur veren masaj."
+      },
+      "image": "/assets/img/mireya-oil-ritual.jpg",
+      "featured": true,
+      "imageFocus": "right",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 38
+        },
+        {
+          "minutes": 90,
+          "price": 52
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Terapi me gurë të nxehtë",
+        "sr": "Terapija vrelim kamenjem",
+        "en": "Hot Stone Therapy",
+        "tr": "Sıcak Taş Terapisi"
+      },
+      "description": {
+        "sq": "Gurë bazalti vullkanik të ngrohur që e çojnë ngrohtësinë thellë në muskuj.",
+        "sr": "Zagrejano vulkansko bazaltno kamenje prenosi toplotu duboko u mišiće.",
+        "en": "Heated volcanic basalt stones carry warmth deep into the muscles.",
+        "tr": "Isıtılmış volkanik bazalt taşlarla kaslara derinlemesine işleyen sıcaklık ve rahatlama."
+      },
+      "image": "/assets/img/mireya-hot-stone-therapy.jpg",
+      "featured": true,
+      "imageFocus": "left",
+      "sessions": [
+        {
+          "minutes": 75,
+          "price": 50
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Masazh me bambu",
+        "sr": "Masaža bambusom",
+        "en": "Bamboo Massage",
+        "tr": "Bambu Masajı"
+      },
+      "description": {
+        "sq": "Brumosje me shufra bambuje të madhësive të ndryshme për gjallëri dhe relaksim.",
+        "sr": "Gnječenje bambusovim štapovima različitih veličina za energiju i opuštanje.",
+        "en": "Kneading with bamboo canes of different sizes to invigorate and relax.",
+        "tr": "Farklı boyutta bambu çubuklarla yoğurma; dolaşımı canlandırır, kasları rahatlatır."
+      },
+      "image": "/assets/img/mireya-hot-stone-therapy.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 45
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "eastern",
+      "name": {
+        "sq": "Terapi me kupa",
+        "sr": "Terapija vakuum čašicama",
+        "en": "Cupping Therapy",
+        "tr": "Kupa (Cupping) Terapisi"
+      },
+      "description": {
+        "sq": "Kupa tradicionale me vakum që çlirojnë indet dhe rrisin qarkullimin.",
+        "sr": "Tradicionalne vakuum čašice koje opuštaju tkivo i pojačavaju cirkulaciju.",
+        "en": "Traditional vacuum cups that loosen tissue and boost circulation.",
+        "tr": "Vakum kupalarıyla dokuyu gevşeten, dolaşımı artıran geleneksel terapi."
+      },
+      "image": "/assets/img/mireya-hot-stone-therapy.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 45,
+          "price": 35
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Rituali ekskluziv Mireya",
+        "sr": "Mireya ekskluzivni ritual",
+        "en": "Mireya Signature Ritual",
+        "tr": "Mireya İmza Ritüeli"
+      },
+      "description": {
+        "sq": "Aromaterapi, gurë të nxehtë, masazh koke dhe trajtim fytyre në një arratisje dyorëshe.",
+        "sr": "Aromaterapija, vrelo kamenje, masaža glave i tretman lica u dvočasovnom bekstvu.",
+        "en": "Aromatherapy, hot stones, head massage and a facial in one two-hour escape.",
+        "tr": "Aromaterapi, sıcak taş, baş masajı ve yüz bakımını birleştiren 2 saatlik tam kaçış."
+      },
+      "image": "/assets/img/mireya-treatment-room.jpg",
+      "featured": true,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 120,
+          "price": 90
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Masazh për çifte",
+        "sr": "Masaža za parove",
+        "en": "Couples’ Massage",
+        "tr": "Çift Masajı"
+      },
+      "description": {
+        "sq": "Krah për krah me dy terapistë — përvojë romantike për ditë të veçanta.",
+        "sr": "Jedno pored drugog, sa dva terapeuta — romantično iskustvo za posebne dane.",
+        "en": "Side by side with two therapists — a romantic experience for special days.",
+        "tr": "Aynı odada, iki terapistle eş zamanlı; özel günler için romantik bir deneyim."
+      },
+      "image": "/assets/img/mireya-couple-suite.jpg",
+      "featured": true,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 70
+        },
+        {
+          "minutes": 90,
+          "price": 100
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Masazh me ar",
+        "sr": "Zlatna masaža",
+        "en": "Gold Massage",
+        "tr": "Gold Masaj"
+      },
+      "description": {
+        "sq": "Ritual luksoz me vajra me ar 24 karat për një lëkurë të shndritshme.",
+        "sr": "Luksuzni ritual sa uljima od 24-karatnog zlata za blistavu, osveženu kožu.",
+        "en": "A luxurious ritual with 24k gold-infused oils for radiant, revitalised skin.",
+        "tr": "24 ayar altın özlü bakım yağlarıyla cilde ışıltı ve canlılık kazandıran lüks ritüel."
+      },
+      "image": "/assets/img/stock-facial-mask.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 75,
+          "price": 70
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Mandara (katër duar)",
+        "sr": "Mandara (četiri ruke)",
+        "en": "Mandara (Four Hands)",
+        "tr": "Mandara (Dört El)"
+      },
+      "description": {
+        "sq": "Dy terapistë në harmoni, duke ndërthurur teknikat balineze, Shiatsu dhe Lomi Lomi.",
+        "sr": "Dva terapeuta u harmoniji spajaju balijske, šijacu i Lomi Lomi tehnike.",
+        "en": "Two therapists in harmony blending Balinese, Shiatsu and Lomi Lomi techniques.",
+        "tr": "İki terapistin uyum içinde uyguladığı Bali, Shiatsu ve Lomi Lomi tekniklerinin sentezi."
+      },
+      "image": "/assets/img/mireya-oil-ritual.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 80
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Masazh me qiri",
+        "sr": "Masaža svećom",
+        "en": "Candle Massage",
+        "tr": "Mum Masajı"
+      },
+      "description": {
+        "sq": "Vaji i ngrohtë i qiririt kozmetik ushqen lëkurën dhe qetëson shqisat.",
+        "sr": "Toplo ulje kozmetičke sveće neguje kožu i smiruje čula.",
+        "en": "Warm oil from a melting care candle nourishes the skin and soothes the senses.",
+        "tr": "Eriyen bakım mumunun sıcak yağıyla cildi besleyen, duyuları okşayan masaj."
+      },
+      "image": "/assets/img/mireya-treatment-room.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 45
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Masazh për shtatzëna",
+        "sr": "Masaža za trudnice",
+        "en": "Pregnancy Massage",
+        "tr": "Hamile Masajı"
+      },
+      "description": {
+        "sq": "Nga tremujori i dytë, me pozicione të sigurta për të lehtësuar shpinën dhe këmbët.",
+        "sr": "Od drugog tromesečja, u bezbednim položajima, za rasterećenje leđa i nogu.",
+        "en": "From the second trimester, safe positioning to ease back and leg strain.",
+        "tr": "İkinci trimesterden itibaren, güvenli pozisyonlarla bel ve bacak yükünü hafifleten masaj."
+      },
+      "image": "/assets/img/mireya-lounge-robe.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 60,
+          "price": 40
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "category": "signature",
+      "name": {
+        "sq": "Trajtim & masazh fytyre",
+        "sr": "Tretman & masaža lica",
+        "en": "Facial & Face Massage",
+        "tr": "Yüz Bakımı & Masajı"
+      },
+      "description": {
+        "sq": "Pastrim, maskë dhe masazh lifting për një lëkurë të çlodhur e të ndritshme.",
+        "sr": "Čišćenje, maska i lifting masaža lica za odmornu, blistavu kožu.",
+        "en": "Cleansing, mask and a lifting face massage for rested, luminous skin.",
+        "tr": "Temizlik, maske ve lifting etkili yüz masajıyla dinlenmiş, aydınlık bir cilt."
+      },
+      "image": "/assets/img/stock-facial.jpg",
+      "featured": false,
+      "imageFocus": "center",
+      "sessions": [
+        {
+          "minutes": 45,
+          "price": 35
+        }
+      ]
+    }
+  ]
+}

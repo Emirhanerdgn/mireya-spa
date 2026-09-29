@@ -37,6 +37,7 @@
   const findService = (id) => DATA.services.find((s) => s.id === id);
 
   function fromPrice(s) {
+    if (!s.prices.length) return '';
     const min = Math.min(...s.prices);
     return s.prices.length > 1 ? t('rituals.from').replace('{p}', price(min)) : price(min);
   }

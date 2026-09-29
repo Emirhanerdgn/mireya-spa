@@ -42,7 +42,7 @@
   }
 
   function serviceOptions(s) {
-    if (!CONFIG.showPricing) return [R.el('option', { value: s.id, text: R.svcName(s.id) })];
+    if (!CONFIG.showPricing || !s.durations.length) return [R.el('option', { value: s.id, text: R.svcName(s.id) })];
     return s.durations.map((d, i) => R.el('option', {
       value: s.id + '|' + d,
       text: R.svcName(s.id) + ' — ' + R.minutes(d) + ' · ' + R.price(s.prices[i])

@@ -1,0 +1,362 @@
+# Pages CMS — Mireya düzenleme paneli (https://app.pagescms.org)
+media:
+  - name: images
+    label: "Fotoğraflar"
+    input: assets/img
+    output: /assets/img
+    categories: [image]
+  - name: videos
+    label: "Videolar"
+    input: assets/video
+    output: /assets/video
+    categories: [video]
+
+content:
+  - name: settings
+    label: "İletişim ve Ayarlar"
+    type: file
+    path: content/settings.json
+    fields:
+      - name: phoneDisplay
+        label: "Telefon (görünen)"
+        type: string
+        description: "Örnek: +383 45 579 532"
+      - name: whatsappNumber
+        label: "WhatsApp numarası"
+        type: string
+        description: "Sadece rakam, ülke koduyla: 38345579532"
+      - name: address
+        label: "Adres"
+        type: string
+      - name: mapQuery
+        label: "Harita araması"
+        type: string
+        description: "Google Haritalarda aranacak adres"
+      - name: hoursWeekdays
+        label: "Çalışma saatleri – hafta içi"
+        type: string
+        description: "Örnek: 10:00 – 22:00"
+      - name: hoursWeekend
+        label: "Çalışma saatleri – hafta sonu"
+        type: string
+      - name: bookingOpen
+        label: "Randevu ilk saat"
+        type: string
+        description: "Örnek: 10:00"
+      - name: bookingClose
+        label: "Randevu son saat"
+        type: string
+        description: "Örnek: 22:00"
+      - name: instagram
+        label: "Instagram linki"
+        type: string
+      - name: facebook
+        label: "Facebook linki"
+        type: string
+      - name: email
+        label: "E-posta"
+        type: string
+      - name: showPricing
+        label: "Fiyat ve süreleri göster"
+        type: boolean
+
+  - name: images
+    label: "Ana Sayfa Görselleri"
+    type: file
+    path: content/images.json
+    fields:
+      - name: heroImage
+        label: "Giriş fotoğrafı (video yüklenemezse)"
+        type: image
+        options:
+          media: images
+      - name: heroVideo
+        label: "Giriş videosu (dikey 9:16 MP4)"
+        type: file
+        options:
+          media: videos
+      - name: aboutMain
+        label: "Hakkımızda – büyük fotoğraf"
+        type: image
+        options:
+          media: images
+      - name: aboutSub
+        label: "Hakkımızda – küçük fotoğraf"
+        type: image
+        options:
+          media: images
+      - name: bookingImage
+        label: "Randevu bölümü fotoğrafı"
+        type: image
+        options:
+          media: images
+
+  - name: services
+    label: "Masajlar"
+    type: file
+    path: content/services.json
+    fields:
+      - name: services
+        label: "Masaj listesi"
+        type: object
+        list: true
+        fields:
+          - name: visible
+            label: "Sitede göster"
+            type: boolean
+          - name: category
+            label: "Kategori"
+            type: select
+            options:
+              values:
+                - value: classic
+                  label: "Klasik & Terapötik"
+                - value: eastern
+                  label: "Uzakdoğu & Aromatik"
+                - value: signature
+                  label: "Özel & İmza"
+          - name: name
+            label: "Masaj adı"
+            type: object
+            fields:
+              - name: sq
+                label: "Arnavutça"
+                type: string
+              - name: sr
+                label: "Sırpça"
+                type: string
+              - name: en
+                label: "İngilizce"
+                type: string
+              - name: tr
+                label: "Türkçe"
+                type: string
+          - name: description
+            label: "Kısa açıklama"
+            type: object
+            fields:
+              - name: sq
+                label: "Arnavutça"
+                type: text
+              - name: sr
+                label: "Sırpça"
+                type: text
+              - name: en
+                label: "İngilizce"
+                type: text
+              - name: tr
+                label: "Türkçe"
+                type: text
+          - name: image
+            label: "Fotoğraf"
+            type: image
+            options:
+              media: images
+          - name: featured
+            label: "İmza Ritüeller bölümünde göster (en fazla 4)"
+            type: boolean
+          - name: imageFocus
+            label: "Ritüel kartında fotoğrafın odak noktası"
+            type: select
+            description: "Logo fotoğrafın solundaysa Sol seçin"
+            options:
+              values:
+                - value: left
+                  label: "Sol"
+                - value: center
+                  label: "Orta"
+                - value: right
+                  label: "Sağ"
+          - name: sessions
+            label: "Seanslar (süre ve fiyat)"
+            type: object
+            list: true
+            fields:
+              - name: minutes
+                label: "Süre (dakika)"
+                type: number
+              - name: price
+                label: "Fiyat (€)"
+                type: number
+
+  - name: gallery
+    label: "Galeri"
+    type: file
+    path: content/gallery.json
+    fields:
+      - name: items
+        label: "Galeri fotoğrafları"
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: "Fotoğraf"
+            type: image
+            options:
+              media: images
+          - name: caption
+            label: "Fotoğraf yazısı"
+            type: object
+            fields:
+              - name: sq
+                label: "Arnavutça"
+                type: string
+              - name: sr
+                label: "Sırpça"
+                type: string
+              - name: en
+                label: "İngilizce"
+                type: string
+              - name: tr
+                label: "Türkçe"
+                type: string
+          - name: tall
+            label: "Uzun (dikey) kutu"
+            type: boolean
+
+  - name: reviews
+    label: "Yorumlar"
+    type: file
+    path: content/reviews.json
+    fields:
+      - name: showSampleNote
+        label: "'Örnek yorumlar' notunu göster"
+        type: boolean
+        description: "Gerçek yorumları girdikten sonra kapatın"
+      - name: items
+        label: "Yorum listesi"
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: "Müşteri adı"
+            type: string
+          - name: language
+            label: "Yorumun dili"
+            type: select
+            options:
+              values: [SQ, SR, EN, TR]
+          - name: stars
+            label: "Yıldız (1–5)"
+            type: number
+          - name: text
+            label: "Yorum"
+            type: text
+
+  - name: texts
+    label: "Sayfa Metinleri"
+    type: file
+    path: content/texts.json
+    fields:
+      - name: sq
+        label: "Arnavutça"
+        type: object
+        fields:
+          - name: hero_t1
+            label: "Giriş başlığı – 1. satır"
+            type: string
+          - name: hero_t2
+            label: "Giriş başlığı – 2. satır (altın renk)"
+            type: string
+          - name: hero_sub
+            label: "Giriş alt yazısı"
+            type: text
+          - name: about_t1
+            label: "Hakkımızda başlığı – 1. kısım"
+            type: string
+          - name: about_t2
+            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
+            type: string
+          - name: about_p1
+            label: "Hakkımızda – 1. paragraf"
+            type: text
+          - name: about_p2
+            label: "Hakkımızda – 2. paragraf"
+            type: text
+          - name: menu_note
+            label: "Masaj menüsü alt notu"
+            type: text
+      - name: sr
+        label: "Sırpça"
+        type: object
+        fields:
+          - name: hero_t1
+            label: "Giriş başlığı – 1. satır"
+            type: string
+          - name: hero_t2
+            label: "Giriş başlığı – 2. satır (altın renk)"
+            type: string
+          - name: hero_sub
+            label: "Giriş alt yazısı"
+            type: text
+          - name: about_t1
+            label: "Hakkımızda başlığı – 1. kısım"
+            type: string
+          - name: about_t2
+            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
+            type: string
+          - name: about_p1
+            label: "Hakkımızda – 1. paragraf"
+            type: text
+          - name: about_p2
+            label: "Hakkımızda – 2. paragraf"
+            type: text
+          - name: menu_note
+            label: "Masaj menüsü alt notu"
+            type: text
+      - name: en
+        label: "İngilizce"
+        type: object
+        fields:
+          - name: hero_t1
+            label: "Giriş başlığı – 1. satır"
+            type: string
+          - name: hero_t2
+            label: "Giriş başlığı – 2. satır (altın renk)"
+            type: string
+          - name: hero_sub
+            label: "Giriş alt yazısı"
+            type: text
+          - name: about_t1
+            label: "Hakkımızda başlığı – 1. kısım"
+            type: string
+          - name: about_t2
+            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
+            type: string
+          - name: about_p1
+            label: "Hakkımızda – 1. paragraf"
+            type: text
+          - name: about_p2
+            label: "Hakkımızda – 2. paragraf"
+            type: text
+          - name: menu_note
+            label: "Masaj menüsü alt notu"
+            type: text
+      - name: tr
+        label: "Türkçe"
+        type: object
+        fields:
+          - name: hero_t1
+            label: "Giriş başlığı – 1. satır"
+            type: string
+          - name: hero_t2
+            label: "Giriş başlığı – 2. satır (altın renk)"
+            type: string
+          - name: hero_sub
+            label: "Giriş alt yazısı"
+            type: text
+          - name: about_t1
+            label: "Hakkımızda başlığı – 1. kısım"
+            type: string
+          - name: about_t2
+            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
+            type: string
+          - name: about_p1
+            label: "Hakkımızda – 1. paragraf"
+            type: text
+          - name: about_p2
+            label: "Hakkımızda – 2. paragraf"
+            type: text
+          - name: menu_note
+            label: "Masaj menüsü alt notu"
+            type: text
