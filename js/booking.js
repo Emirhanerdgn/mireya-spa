@@ -19,12 +19,21 @@
     const src = calendarEmbedUrl(CONFIG.bookingCalendarUrl);
     const box = document.querySelector('[data-booking-calendar]');
     if (!src || !box) return false;
-    box.replaceChildren(R.el('iframe', { src, title: 'Mireya — online booking', loading: 'lazy' }));
+    // Show Google's booking page in the site's current language
+    const HL = { sq: 'sq', sr: 'sr-Latn', en: 'en', tr: 'tr' };
+    const frame = R.el('iframe', { title: 'Mireya — online booking', loading: 'lazy' });
+    const setLang = () => {
+      const url = new URL(src);
+      url.searchParams.set('hl', HL[I18N.lang] || 'sq');
+      if (frame.src !== url.toString()) frame.src = url.toString();
+    };
+    box.replaceChildren(frame);
     box.hidden = false;
     document.querySelector('[data-booking-form]').hidden = true;
     const lead = document.querySelector('[data-booking-lead]');
     if (lead) lead.dataset.i18n = 'book.leadCal';
     document.addEventListener('mireya:lang', () => {
+      setLang();
       document.querySelectorAll('[data-wa-link]').forEach((a) => {
         const num = String(CONFIG.whatsappNumber || '').replace(/\D/g, '');
         a.href = num ? 'https://wa.me/' + num : '#contact';
