@@ -4,8 +4,6 @@
   const CONFIG = window.MIREYA_CONFIG || {};
   const LANGS = Object.freeze(['sq', 'sr', 'en', 'tr']);
   const STORAGE_KEY = 'mireya-lang';
-  const BROWSER_MAP = Object.freeze({ sq: 'sq', sr: 'sr', hr: 'sr', bs: 'sr', me: 'sr', en: 'en', tr: 'tr' });
-
   let current = CONFIG.defaultLang || 'sq';
 
   function readStored() {
@@ -21,10 +19,8 @@
     if (LANGS.includes(fromUrl)) return fromUrl;
     const stored = readStored();
     if (LANGS.includes(stored)) return stored;
-    const browser = (navigator.languages || [navigator.language || ''])
-      .map((l) => BROWSER_MAP[String(l).slice(0, 2).toLowerCase()])
-      .find(Boolean);
-    return browser || CONFIG.defaultLang || 'sq';
+    // First visit always opens in the default language (Albanian)
+    return CONFIG.defaultLang || 'sq';
   }
 
   function t(key) {
