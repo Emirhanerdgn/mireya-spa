@@ -1,0 +1,59 @@
+{
+  "defaultLang": "sq",
+  "sections": {
+    "marquee": true,
+    "about": true,
+    "rituals": true,
+    "menu": true,
+    "journey": true,
+    "gallery": true,
+    "reviews": true,
+    "booking": true,
+    "contact": true
+  },
+  "stats": [
+    {
+      "value": "",
+      "label": {
+        "sq": "masazhe dhe rituale",
+        "sr": "masaža i rituala",
+        "en": "massages & rituals",
+        "tr": "masaj ve ritüel"
+      }
+    },
+    {
+      "value": "1:1",
+      "label": {
+        "sq": "seanca personale",
+        "sr": "individualni tretman",
+        "en": "personal sessions",
+        "tr": "kişiye özel seans"
+      }
+    },
+    {
+      "value": "100%",
+      "label": {
+        "sq": "standard higjiene",
+        "sr": "standard higijene",
+        "en": "hygiene standard",
+        "tr": "hijyen standardı"
+      }
+    }
+  ],
+  "announcement": {
+    "enabled": false,
+    "text": {
+      "sq": "",
+      "sr": "",
+      "en": "",
+      "tr": ""
+    },
+    "link": ""
+  },
+  "appearance": {
+    "accent": "gold",
+    "animations": true,
+    "heroVideo": true,
+    "whatsappButton": true
+  }
+}

@@ -172,11 +172,22 @@
     })));
   }
 
+  function renderStats() {
+    const box = document.querySelector('[data-stats]');
+    if (!box) return;
+    const stats = DATA.stats || [];
+    box.replaceChildren(...stats.map((st) => el('div', {}, [
+      el('dt', { text: st.value }), el('dd', { text: t(st.key) })
+    ])));
+    box.hidden = !stats.length;
+  }
+
   function renderCounts() {
     document.querySelectorAll('[data-service-count]').forEach((n) => { n.textContent = String(DATA.services.length); });
   }
 
   function renderLocalized() {
+    renderStats();
     renderMarquee();
     renderRituals();
     renderMenuTabs();

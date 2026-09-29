@@ -18,7 +18,8 @@ Tarayıcıda `http://localhost:8944` adresini açın. Dil seçmek için `?lang=s
 | Masajlar (4 dilde ad/açıklama, fotoğraf, ritüel kartı, süre/fiyat) | `content/services.json` |
 | Galeri | `content/gallery.json` |
 | Yorumlar | `content/reviews.json` |
-| Sayfa Metinleri (giriş ve hakkımızda, 4 dil) | `content/texts.json` |
+| Sayfa Metinleri (sitedeki tüm yazılar, 4 dil) | `content/ui.json` |
+| Görünüm ve Bölümler (açılış dili, duyuru şeridi, bölümleri aç/kapat, giriş rakamları, vurgu rengi, animasyon, video, WhatsApp butonu) | `content/site.json` |
 
 Diğer arayüz metinleri `js/i18n/*.js`, teknik varsayılanlar `js/config.js` içindedir. `js/boot.js` içeriği yükleyip siteyi başlatır.
 

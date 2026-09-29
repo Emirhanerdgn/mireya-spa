@@ -1,0 +1,574 @@
+{
+  "sq": {
+    "meta": {
+      "title": "Mireya — Massage Therapy & Wellness | Kosovë",
+      "desc": "Mireya Massage Therapy & Wellness: masazh suedez, i thellë, tajlandez, balinez, me gurë të nxehtë, aromaterapi dhe rituale ekskluzive. Përvojë premium masazhi në Kosovë."
+    },
+    "nav": {
+      "about": "Rreth nesh",
+      "rituals": "Rituale",
+      "menu": "Menuja e masazheve",
+      "gallery": "Galeria",
+      "reviews": "Përshtypjet",
+      "contact": "Kontakti",
+      "book": "Rezervo",
+      "open": "Hap menunë",
+      "close": "Mbyll menunë"
+    },
+    "hero": {
+      "kicker": "Massage Therapy & Wellness",
+      "t1": "Një pushim për trupin,",
+      "t2": "një ritual për shpirtin.",
+      "sub": "Te Mireya, çdo seancë kthehet në një kohë të qetë vetëm për ju — dru i ngrohtë, dritë e butë dhe duar eksperte.",
+      "cta1": "Rezervo tani",
+      "cta2": "Menuja e masazheve",
+      "badge": "Dhoma private terapie",
+      "scroll": "Zbulo"
+    },
+    "about": {
+      "kicker": "Rreth nesh",
+      "t1": "Në zemër të qytetit,",
+      "t2": "një strehë e qetë.",
+      "p1": "Mireya u krijua si një vend ku mund të largoheni nga ritmi i ditës dhe të ktheheni te vetja. Ngrohtësia e arrës, freskia e mermerit dhe butësia e dritës së artë ju mirëpresin që në hyrje.",
+      "p2": "Terapistët tanë me përvojë e nisin çdo seancë me një konsultë të shkurtër, duke përshtatur presionin, teknikën dhe vajrat sipas nevojave tuaja. Qëllimi ynë është i thjeshtë: të largoheni më të lehtë se kur erdhët.",
+      "f1t": "Terapistë ekspertë",
+      "f1d": "Ekip i certifikuar, me përvojë dhe i përkushtuar.",
+      "f2t": "Higjienë e përsosur",
+      "f2d": "Peshqirë të rinj dhe hapësirë e dezinfektuar për çdo mysafir.",
+      "f3t": "Vajra natyrale premium",
+      "f3d": "Vajra bimore të shtypura në të ftohtë dhe esenciale të pastra.",
+      "f4t": "Dhoma private",
+      "f4d": "Dhoma të qeta për një person dhe për çifte.",
+      "sign": "Ekipi Mireya"
+    },
+    "rituals": {
+      "kicker": "Rituale ekskluzive",
+      "t1": "Më të dashurat",
+      "t2": "e Mireya-s",
+      "lead": "Përvoja të kompozuara me kujdes, për të cilat mysafirët tanë kthehen sërish.",
+      "choose": "Zgjidh këtë ritual",
+      "from": "nga {p}"
+    },
+    "menu": {
+      "kicker": "Menuja e masazheve",
+      "t1": "Zgjidhni prekjen",
+      "t2": "që ju duhet sot",
+      "lead": "Nuk jeni të sigurt? Terapisti ynë do t’ju ndihmojë të zgjidhni trajtimin e duhur para seancës.",
+      "cat_classic": "Klasike & Terapeutike",
+      "cat_eastern": "Lindore & Aromatike",
+      "cat_signature": "Ekskluzive & Speciale",
+      "min": "min",
+      "book": "Zgjidh",
+      "note": "Ju ndihmojmë të zgjidhni trajtimin dhe kohëzgjatjen e duhur; na shkruani në WhatsApp për detaje."
+    },
+    "journey": {
+      "kicker": "Përvoja",
+      "t1": "Që nga momenti",
+      "t2": "kur hyni",
+      "s1t": "Mirëseardhja",
+      "s1d": "Çaj bimor dhe peshqir i ngrohtë në sallon — një çast për të marrë frymë.",
+      "s2t": "Konsulta",
+      "s2d": "Flasim për nevojat tuaja, zonat e ndjeshme dhe presionin që preferoni.",
+      "s3t": "Terapia",
+      "s3d": "Dritë e zbehtë, muzikë e qetë dhe vajra të zgjedhur posaçërisht për ju.",
+      "s4t": "Pushimi",
+      "s4d": "Pa nxitim pas seancës — kthehuni në ditën tuaj me ritmin tuaj."
+    },
+    "gallery": {
+      "kicker": "Galeria",
+      "t1": "Momente",
+      "t2": "te Mireya",
+      "close": "Mbyll",
+      "prev": "Para",
+      "next": "Pas"
+    },
+    "reviews": {
+      "kicker": "Përshtypjet e mysafirëve",
+      "t1": "Me fjalët",
+      "t2": "e tyre",
+      "sample": "Përshtypje shembull — parapamje para publikimit",
+      "write": "Shkruani një vlerësim në Google",
+      "prev": "Përshtypja e mëparshme",
+      "next": "Përshtypja e radhës"
+    },
+    "book": {
+      "kicker": "Rezervimi",
+      "t1": "Le ta rezervojmë",
+      "t2": "kohën tuaj",
+      "lead": "Plotësoni formularin dhe kërkesa juaj na arrin përmes WhatsApp. E konfirmojmë sa më shpejt.",
+      "leadCal": "Zgjidhni ditën dhe orën që ju përshtaten; rezervimi regjistrohet menjëherë në kalendarin tonë dhe merrni konfirmim me email.",
+      "name": "Emri dhe mbiemri",
+      "phone": "Telefoni",
+      "service": "Trajtimi",
+      "servicePh": "Zgjidhni masazhin",
+      "date": "Data",
+      "time": "Ora",
+      "timePh": "Zgjidhni orën",
+      "guests": "Numri i personave",
+      "g1": "1 person",
+      "g2": "2 persona (çift)",
+      "note": "Shënim",
+      "notePh": "Zona të ndjeshme, preferenca për terapistin, etj.",
+      "submit": "Dërgo kërkesën",
+      "direct": "Na shkruani direkt në WhatsApp",
+      "privacy": "Të dhënat tuaja përdoren vetëm për terminin tuaj.",
+      "errRequired": "Ju lutemi plotësoni këtë fushë.",
+      "errPhone": "Shkruani një numër telefoni të vlefshëm.",
+      "errDate": "Zgjidhni një datë në të ardhmen.",
+      "ok": "Faleminderit! Kërkesa juaj u pranua — do t’ju kontaktojmë së shpejti.",
+      "okWa": "Mesazhi juaj është gati — hapni WhatsApp për ta dërguar:",
+      "soon": "Rezervimi online do të jetë aktiv shumë shpejt. Për momentin, ju lutemi na telefononi.",
+      "fail": "Dërgimi dështoi. Provoni përsëri ose na shkruani në WhatsApp.",
+      "msgIntro": "Përshëndetje Mireya, dëshiroj të rezervoj:"
+    },
+    "contact": {
+      "kicker": "Kontakti",
+      "t1": "Ju presim",
+      "t2": "me kënaqësi",
+      "address": "Adresa",
+      "hours": "Orari",
+      "weekdays": "E hënë – E premte",
+      "weekend": "Fundjava",
+      "phone": "Telefoni & WhatsApp",
+      "follow": "Na ndiqni",
+      "soon": "Së shpejti",
+      "directions": "Merr udhëzimet"
+    },
+    "footer": {
+      "tag": "Koha më e bukur që ia dhuroni vetes.",
+      "rights": "Të gjitha të drejtat e rezervuara."
+    },
+    "wa": {
+      "float": "Na shkruani në WhatsApp"
+    }
+  },
+  "sr": {
+    "meta": {
+      "title": "Mireya — Massage Therapy & Wellness | Kosovo",
+      "desc": "Mireya Massage Therapy & Wellness: švedska, duboka, tajlandska, balijska masaža, vrelo kamenje, aromaterapija i ekskluzivni rituali. Premium masaža na Kosovu."
+    },
+    "nav": {
+      "about": "O nama",
+      "rituals": "Rituali",
+      "menu": "Meni masaža",
+      "gallery": "Galerija",
+      "reviews": "Utisci",
+      "contact": "Kontakt",
+      "book": "Rezerviši",
+      "open": "Otvori meni",
+      "close": "Zatvori meni"
+    },
+    "hero": {
+      "kicker": "Massage Therapy & Wellness",
+      "t1": "Predah za telo,",
+      "t2": "ritual za dušu.",
+      "sub": "U Mireyi svaki tretman postaje mirno vreme samo za vas — toplo drvo, meko svetlo i stručne ruke.",
+      "cta1": "Rezervišite",
+      "cta2": "Meni masaža",
+      "badge": "Privatne sobe za terapiju",
+      "scroll": "Otkrijte"
+    },
+    "about": {
+      "kicker": "O nama",
+      "t1": "U srcu grada,",
+      "t2": "tiho utočište.",
+      "p1": "Mireya je osmišljena kao mesto gde se sklanjate od svakodnevne žurbe i vraćate sebi. Toplina oraha, svežina mermera i mekoća zlatnog svetla dočekuju vas već na ulazu.",
+      "p2": "Naši iskusni terapeuti svaki tretman započinju kratkim razgovorom i prilagođavaju pritisak, tehniku i ulja isključivo vašim potrebama. Naš cilj je jednostavan: da odete lakši nego što ste došli.",
+      "f1t": "Stručni terapeuti",
+      "f1d": "Sertifikovan, iskusan i posvećen tim.",
+      "f2t": "Besprekorna higijena",
+      "f2d": "Sveži peškiri i dezinfikovan prostor za svakog gosta.",
+      "f3t": "Premium prirodna ulja",
+      "f3d": "Hladno ceđena biljna i čista eterična ulja.",
+      "f4t": "Privatne sobe",
+      "f4d": "Mirne sobe za jednu osobu i za parove.",
+      "sign": "Tim Mireya"
+    },
+    "rituals": {
+      "kicker": "Ekskluzivni rituali",
+      "t1": "Najomiljeniji",
+      "t2": "u Mireyi",
+      "lead": "Pažljivo osmišljena iskustva zbog kojih nam se gosti uvek iznova vraćaju.",
+      "choose": "Izaberi ovaj ritual",
+      "from": "od {p}"
+    },
+    "menu": {
+      "kicker": "Meni masaža",
+      "t1": "Izaberite dodir",
+      "t2": "koji vam danas treba",
+      "lead": "Niste sigurni? Terapeut će vam pomoći da pre tretmana izaberete pravu masažu.",
+      "cat_classic": "Klasične & terapeutske",
+      "cat_eastern": "Istočnjačke & aromatične",
+      "cat_signature": "Ekskluzivne & posebne",
+      "min": "min",
+      "book": "Izaberi",
+      "note": "Pomoći ćemo vam da izaberete pravi tretman i trajanje; pišite nam na WhatsApp za detalje."
+    },
+    "journey": {
+      "kicker": "Iskustvo",
+      "t1": "Od trenutka",
+      "t2": "kada uđete",
+      "s1t": "Doček",
+      "s1d": "Biljni čaj i topli peškir u salonu — trenutak da predahnete.",
+      "s2t": "Konsultacija",
+      "s2d": "Razgovaramo o vašim potrebama, osetljivim zonama i željenom pritisku.",
+      "s3t": "Terapija",
+      "s3d": "Prigušeno svetlo, tiha muzika i ulja odabrana baš za vas.",
+      "s4t": "Odmor",
+      "s4d": "Bez žurbe posle tretmana — vratite se danu svojim ritmom."
+    },
+    "gallery": {
+      "kicker": "Galerija",
+      "t1": "Trenuci",
+      "t2": "u Mireyi",
+      "close": "Zatvori",
+      "prev": "Prethodna",
+      "next": "Sledeća"
+    },
+    "reviews": {
+      "kicker": "Utisci gostiju",
+      "t1": "Njihovim",
+      "t2": "rečima",
+      "sample": "Primeri utisaka — pregled pre objavljivanja",
+      "write": "Ostavite recenziju na Google-u",
+      "prev": "Prethodni utisak",
+      "next": "Sledeći utisak"
+    },
+    "book": {
+      "kicker": "Rezervacija",
+      "t1": "Rezervišimo",
+      "t2": "vaše vreme",
+      "lead": "Popunite formular i vaš zahtev stiže do nas preko WhatsApp-a. Potvrđujemo u najkraćem roku.",
+      "leadCal": "Izaberite dan i vreme koji vam odgovaraju; rezervacija odmah ulazi u naš kalendar, a potvrdu dobijate e-poštom.",
+      "name": "Ime i prezime",
+      "phone": "Telefon",
+      "service": "Tretman",
+      "servicePh": "Izaberite masažu",
+      "date": "Datum",
+      "time": "Vreme",
+      "timePh": "Izaberite vreme",
+      "guests": "Broj osoba",
+      "g1": "1 osoba",
+      "g2": "2 osobe (par)",
+      "note": "Napomena",
+      "notePh": "Osetljive zone, željeni terapeut i sl.",
+      "submit": "Pošalji zahtev",
+      "direct": "Pišite nam direktno na WhatsApp",
+      "privacy": "Vaši podaci koriste se isključivo za vaš termin.",
+      "errRequired": "Molimo popunite ovo polje.",
+      "errPhone": "Unesite ispravan broj telefona.",
+      "errDate": "Izaberite datum u budućnosti.",
+      "ok": "Hvala! Vaš zahtev je primljen — uskoro ćemo vas kontaktirati.",
+      "okWa": "Vaša poruka je spremna — otvorite WhatsApp da je pošaljete:",
+      "soon": "Online rezervacija biće uskoro dostupna. Za sada nas, molimo, pozovite telefonom.",
+      "fail": "Slanje nije uspelo. Pokušajte ponovo ili nam pišite na WhatsApp.",
+      "msgIntro": "Zdravo Mireya, želim da rezervišem:"
+    },
+    "contact": {
+      "kicker": "Kontakt",
+      "t1": "Radujemo se",
+      "t2": "vašem dolasku",
+      "address": "Adresa",
+      "hours": "Radno vreme",
+      "weekdays": "Radnim danima",
+      "weekend": "Vikendom",
+      "phone": "Telefon & WhatsApp",
+      "follow": "Pratite nas",
+      "soon": "Uskoro",
+      "directions": "Uputstva za dolazak"
+    },
+    "footer": {
+      "tag": "Najlepše vreme koje poklanjate sebi.",
+      "rights": "Sva prava zadržana."
+    },
+    "wa": {
+      "float": "Pišite nam na WhatsApp"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Mireya — Massage Therapy & Wellness | Kosovo",
+      "desc": "Mireya Massage Therapy & Wellness: Swedish, deep tissue, Thai, Balinese, hot stone, aromatherapy and signature rituals. A premium massage experience in Kosovo."
+    },
+    "nav": {
+      "about": "About",
+      "rituals": "Rituals",
+      "menu": "Massage Menu",
+      "gallery": "Gallery",
+      "reviews": "Reviews",
+      "contact": "Contact",
+      "book": "Book Now",
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "hero": {
+      "kicker": "Massage Therapy & Wellness",
+      "t1": "A pause for the body,",
+      "t2": "a ritual for the soul.",
+      "sub": "At Mireya, every session becomes quiet time reserved only for you — warm wood, soft light and expert hands.",
+      "cta1": "Book Now",
+      "cta2": "Massage Menu",
+      "badge": "Private therapy rooms",
+      "scroll": "Discover"
+    },
+    "about": {
+      "kicker": "About us",
+      "t1": "In the heart of the city,",
+      "t2": "a quiet sanctuary.",
+      "p1": "Mireya was designed as a place to step out of the day’s rush and come back to yourself. The warmth of walnut, the coolness of marble and the softness of golden light greet you from the moment you walk in.",
+      "p2": "Our experienced therapists begin every session with a short consultation, tailoring pressure, technique and oils entirely to your needs. Our aim is simple: that you leave lighter than you arrived.",
+      "f1t": "Expert therapists",
+      "f1d": "Certified, experienced and genuinely caring.",
+      "f2t": "Impeccable hygiene",
+      "f2d": "Fresh linen and a sanitised room for every guest.",
+      "f3t": "Premium natural oils",
+      "f3d": "Cold-pressed botanicals and pure essential oils.",
+      "f4t": "Private rooms",
+      "f4d": "Calm single and couples’ suites.",
+      "sign": "The Mireya Team"
+    },
+    "rituals": {
+      "kicker": "Signature Rituals",
+      "t1": "Mireya’s",
+      "t2": "most loved",
+      "lead": "Carefully composed experiences our guests return for again and again.",
+      "choose": "Choose this ritual",
+      "from": "from {p}"
+    },
+    "menu": {
+      "kicker": "Massage Menu",
+      "t1": "Choose the touch",
+      "t2": "you need today",
+      "lead": "Not sure? Your therapist will help you choose the right treatment before your session.",
+      "cat_classic": "Classic & Therapeutic",
+      "cat_eastern": "Far-Eastern & Aromatic",
+      "cat_signature": "Signature & Special",
+      "min": "min",
+      "book": "Select",
+      "note": "We will help you choose the right treatment and session length; message us on WhatsApp for details."
+    },
+    "journey": {
+      "kicker": "The Experience",
+      "t1": "From the moment",
+      "t2": "you walk in",
+      "s1t": "Welcome",
+      "s1d": "Herbal tea and a warm towel in our lounge — a moment to breathe.",
+      "s2t": "Consultation",
+      "s2d": "We talk through your needs, sensitive areas and preferred pressure.",
+      "s3t": "Therapy",
+      "s3d": "Dimmed light, calm music and oils chosen just for you.",
+      "s4t": "Rest",
+      "s4d": "No rush afterwards — return to the day at your own pace."
+    },
+    "gallery": {
+      "kicker": "Gallery",
+      "t1": "Moments",
+      "t2": "at Mireya",
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "reviews": {
+      "kicker": "Guest Reviews",
+      "t1": "In their",
+      "t2": "own words",
+      "sample": "Sample reviews — pre-launch preview",
+      "write": "Write a review on Google",
+      "prev": "Previous review",
+      "next": "Next review"
+    },
+    "book": {
+      "kicker": "Reservation",
+      "t1": "Let us reserve",
+      "t2": "your time",
+      "lead": "Fill in the form and your request reaches us via WhatsApp. We confirm as quickly as possible.",
+      "leadCal": "Pick the day and time that suit you; your booking goes straight into our calendar and you receive an email confirmation.",
+      "name": "Full name",
+      "phone": "Phone",
+      "service": "Treatment",
+      "servicePh": "Choose a massage",
+      "date": "Date",
+      "time": "Time",
+      "timePh": "Choose a time",
+      "guests": "Guests",
+      "g1": "1 person",
+      "g2": "2 people (couple)",
+      "note": "Note",
+      "notePh": "Sensitive areas, therapist preference, etc.",
+      "submit": "Send Booking Request",
+      "direct": "Message us directly on WhatsApp",
+      "privacy": "Your details are used only for your appointment.",
+      "errRequired": "Please fill in this field.",
+      "errPhone": "Please enter a valid phone number.",
+      "errDate": "Please choose a future date.",
+      "ok": "Thank you! Your request has been received — we will contact you shortly.",
+      "okWa": "Your message is ready — open WhatsApp to send it:",
+      "soon": "Online booking will be available very soon. For now, please give us a call.",
+      "fail": "Could not send. Please try again or message us on WhatsApp.",
+      "msgIntro": "Hello Mireya, I would like to book:"
+    },
+    "contact": {
+      "kicker": "Contact",
+      "t1": "We look forward",
+      "t2": "to welcoming you",
+      "address": "Address",
+      "hours": "Opening hours",
+      "weekdays": "Weekdays",
+      "weekend": "Weekend",
+      "phone": "Phone & WhatsApp",
+      "follow": "Follow us",
+      "soon": "Coming soon",
+      "directions": "Get directions"
+    },
+    "footer": {
+      "tag": "The finest time you give yourself.",
+      "rights": "All rights reserved."
+    },
+    "wa": {
+      "float": "Chat on WhatsApp"
+    }
+  },
+  "tr": {
+    "meta": {
+      "title": "Mireya — Massage Therapy & Wellness | Kosova",
+      "desc": "Mireya Massage Therapy & Wellness: İsveç, derin doku, Thai, Bali, sıcak taş, aromaterapi ve imza ritüeller. Kosova’da premium masaj deneyimi."
+    },
+    "nav": {
+      "about": "Hakkımızda",
+      "rituals": "Ritüeller",
+      "menu": "Masaj Menüsü",
+      "gallery": "Galeri",
+      "reviews": "Yorumlar",
+      "contact": "İletişim",
+      "book": "Randevu Al",
+      "open": "Menüyü aç",
+      "close": "Menüyü kapat"
+    },
+    "hero": {
+      "kicker": "Massage Therapy & Wellness",
+      "t1": "Bedeninize bir mola,",
+      "t2": "ruhunuza bir ritüel.",
+      "sub": "Mireya’da her seans; sıcak ahşap, yumuşak ışık ve uzman ellerle yalnızca size ayrılmış sakin bir zamana dönüşür.",
+      "cta1": "Randevu Al",
+      "cta2": "Masaj Menüsü",
+      "badge": "Kişiye özel terapi odaları",
+      "scroll": "Keşfet"
+    },
+    "about": {
+      "kicker": "Hakkımızda",
+      "t1": "Şehrin ortasında",
+      "t2": "sessiz bir sığınak.",
+      "p1": "Mireya, günün temposundan sıyrılıp kendinize dönebileceğiniz bir yer olarak tasarlandı. Ceviz ahşabın sıcaklığı, mermerin serinliği ve altın ışığın yumuşaklığı sizi daha kapıdan girerken karşılar.",
+      "p2": "Deneyimli terapistlerimiz her seansa kısa bir danışmayla başlar; baskıyı, tekniği ve yağları tamamen sizin ihtiyacınıza göre belirler. Amacımız basit: buradan geldiğinizden daha hafif ayrılmanız.",
+      "f1t": "Uzman terapistler",
+      "f1d": "Sertifikalı, deneyimli ve güler yüzlü ekip.",
+      "f2t": "Kusursuz hijyen",
+      "f2d": "Her misafir için yeni havlu ve sterilize alan.",
+      "f3t": "Premium doğal yağlar",
+      "f3d": "Soğuk sıkım bitkisel ve saf esansiyel yağlar.",
+      "f4t": "Özel odalar",
+      "f4d": "Tek kişilik ve çiftlere özel sakin odalar.",
+      "sign": "Mireya Ekibi"
+    },
+    "rituals": {
+      "kicker": "İmza Ritüeller",
+      "t1": "Mireya’nın",
+      "t2": "en sevilenleri",
+      "lead": "Misafirlerimizin tekrar tekrar döndüğü, özenle kurgulanmış deneyimler.",
+      "choose": "Bu ritüeli seç",
+      "from": "{p} ve üzeri"
+    },
+    "menu": {
+      "kicker": "Masaj Menüsü",
+      "t1": "Size iyi gelecek",
+      "t2": "dokunuşu seçin",
+      "lead": "Kararsız mısınız? Terapistimiz seans öncesinde size en uygun masajı birlikte belirlesin.",
+      "cat_classic": "Klasik & Terapötik",
+      "cat_eastern": "Uzakdoğu & Aromatik",
+      "cat_signature": "Özel & İmza",
+      "min": "dk",
+      "book": "Seç",
+      "note": "Size en uygun masajı ve seans süresini birlikte belirleyelim; bilgi için WhatsApp’tan yazın."
+    },
+    "journey": {
+      "kicker": "Deneyim",
+      "t1": "Kapıdan girdiğiniz",
+      "t2": "andan itibaren",
+      "s1t": "Karşılama",
+      "s1d": "Bitki çayı ve sıcak havlu ile lounge’da kısa bir nefes.",
+      "s2t": "Danışma",
+      "s2d": "Beklentinizi, hassas bölgeleri ve tercih ettiğiniz baskıyı konuşuruz.",
+      "s3t": "Terapi",
+      "s3d": "Loş ışık, sakin müzik ve size özel seçilmiş yağlarla seansınız.",
+      "s4t": "Dinlenme",
+      "s4d": "Seans sonrası acele etmeden, kendi ritminizde dönüş."
+    },
+    "gallery": {
+      "kicker": "Galeri",
+      "t1": "Mireya’dan",
+      "t2": "kareler",
+      "close": "Kapat",
+      "prev": "Önceki",
+      "next": "Sonraki"
+    },
+    "reviews": {
+      "kicker": "Misafir Yorumları",
+      "t1": "Onların",
+      "t2": "sözleriyle",
+      "sample": "Örnek yorumlar — yayın öncesi önizleme",
+      "write": "Google’da yorum yazın",
+      "prev": "Önceki yorum",
+      "next": "Sonraki yorum"
+    },
+    "book": {
+      "kicker": "Rezervasyon",
+      "t1": "Zamanınızı",
+      "t2": "ayıralım",
+      "lead": "Formu doldurun, talebiniz WhatsApp üzerinden bize ulaşsın. Onay için en kısa sürede dönüş yapıyoruz.",
+      "leadCal": "Size uygun gün ve saati seçin; randevunuz anında takvimimize işlenir ve e-postanıza onay gelir.",
+      "name": "Ad Soyad",
+      "phone": "Telefon",
+      "service": "Hizmet",
+      "servicePh": "Masaj seçin",
+      "date": "Tarih",
+      "time": "Saat",
+      "timePh": "Saat seçin",
+      "guests": "Kişi sayısı",
+      "g1": "1 kişi",
+      "g2": "2 kişi (çift)",
+      "note": "Not",
+      "notePh": "Hassas bölgeler, terapist tercihi vb.",
+      "submit": "Randevu Talebi Gönder",
+      "direct": "Doğrudan WhatsApp’tan yazın",
+      "privacy": "Bilgileriniz yalnızca randevunuz için kullanılır.",
+      "errRequired": "Lütfen bu alanı doldurun.",
+      "errPhone": "Geçerli bir telefon numarası girin.",
+      "errDate": "Geçmiş bir tarih seçilemez.",
+      "ok": "Teşekkürler! Talebiniz alındı, en kısa sürede sizinle iletişime geçeceğiz.",
+      "okWa": "Mesajınız hazır — göndermek için WhatsApp’ı açın:",
+      "soon": "Online rezervasyon çok yakında aktif olacak. Şimdilik lütfen bizi telefonla arayın.",
+      "fail": "Gönderilemedi. Lütfen tekrar deneyin ya da WhatsApp’tan yazın.",
+      "msgIntro": "Merhaba Mireya, randevu talebim:"
+    },
+    "contact": {
+      "kicker": "İletişim",
+      "t1": "Sizi",
+      "t2": "bekliyoruz",
+      "address": "Adres",
+      "hours": "Çalışma saatleri",
+      "weekdays": "Hafta içi",
+      "weekend": "Hafta sonu",
+      "phone": "Telefon & WhatsApp",
+      "follow": "Bizi takip edin",
+      "soon": "Çok yakında",
+      "directions": "Yol tarifi al"
+    },
+    "footer": {
+      "tag": "Kendinize ayırdığınız en güzel zaman.",
+      "rights": "Tüm hakları saklıdır."
+    },
+    "wa": {
+      "float": "WhatsApp ile yazın"
+    }
+  }
+}

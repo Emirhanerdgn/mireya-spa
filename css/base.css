@@ -53,7 +53,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) - 10px); -webkit-text-size-adjust: 100%; }
+html { --announce-h: 0px; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + var(--announce-h) - 10px); -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--ink);
@@ -214,11 +214,10 @@ figure { margin: 0; }
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
-  height: calc(var(--header-h) + env(safe-area-inset-top, 0px));
   padding-top: env(safe-area-inset-top, 0px);
   display: flex;
-  align-items: center;
-  transition: background var(--dur) var(--ease-out), border-color var(--dur), height var(--dur) var(--ease-out);
+  flex-direction: column;
+  transition: background var(--dur) var(--ease-out), border-color var(--dur);
   border-bottom: 1px solid transparent;
 }
 .site-header.is-solid {
@@ -228,7 +227,11 @@ figure { margin: 0; }
   backdrop-filter: blur(14px) saturate(1.2);
   border-color: var(--line);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: var(--header-h); transition: height var(--dur) var(--ease-out); }
+.announce { background: var(--gold-grad); color: var(--ink); text-align: center; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1.4; }
+.announce a { display: block; padding: 0.55rem var(--gutter); color: inherit; }
+.announce a[href]:hover { text-decoration: underline; }
+html.has-announce { --announce-h: 2.1rem; }
 .main-nav ul { display: flex; gap: clamp(1rem, 0.2rem + 1.6vw, 2.2rem); }
 .main-nav a {
   position: relative;
@@ -286,7 +289,7 @@ figure { margin: 0; }
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
-    padding: calc(var(--header-h) + 1rem) var(--gutter) 2rem;
+    padding: calc(var(--header-h) + var(--announce-h) + 1rem) var(--gutter) 2rem;
     background:
       repeating-linear-gradient(90deg, rgba(106, 69, 39, 0.12) 0 14px, transparent 14px 22px),
       var(--ink);
@@ -364,6 +367,10 @@ figure { margin: 0; }
 }
 .wa-float svg { width: 28px; height: 28px; }
 .wa-float:hover { transform: translateY(-3px) scale(1.04); }
+
+/* panel option: animations off */
+html.no-motion .reveal { transform: none; transition: none; }
+html.no-motion .rise, html.no-motion .fade-in, html.no-motion .hero-arch img, html.no-motion .marquee-track, html.no-motion .scroll-cue i { animation: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

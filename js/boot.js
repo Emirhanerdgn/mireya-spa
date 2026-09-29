@@ -9,7 +9,16 @@
   const CATEGORIES = Object.freeze(['classic', 'eastern', 'signature']);
   const FOCUS = Object.freeze({ left: '15% 50%', center: '50% 50%', right: '85% 50%' });
   const MAX_RITUALS = 4;
-  const CONTENT_FILES = ['settings', 'images', 'services', 'gallery', 'reviews', 'texts'];
+  const CONTENT_FILES = ['settings', 'images', 'services', 'gallery', 'reviews', 'ui', 'site'];
+  const SECTION_TARGETS = Object.freeze({
+    marquee: '.marquee', about: '#about', rituals: '#rituals', menu: '#menu', journey: '.journey',
+    gallery: '#gallery', reviews: '#reviews', booking: '#booking', contact: '#contact'
+  });
+  const ACCENTS = Object.freeze({
+    champagne: ['#d8c3a0', '#f3e7cf', '#a08a63', 'linear-gradient(100deg, #f7efdf 0%, #d8c3a0 45%, #a8916a 100%)'],
+    rose: ['#c99a86', '#efd3c6', '#9b6a58', 'linear-gradient(100deg, #f5ddd2 0%, #c99a86 45%, #95614f 100%)'],
+    bronze: ['#b0793f', '#e0b98a', '#7f5227', 'linear-gradient(100deg, #e8c79e 0%, #b0793f 45%, #7a4d22 100%)']
+  });
   const SCRIPTS = [
     'js/i18n/sq.js', 'js/i18n/sr.js', 'js/i18n/en.js', 'js/i18n/tr.js',
     'js/i18n.js', 'js/render.js', 'js/booking.js', 'js/main.js'
@@ -68,9 +77,19 @@
     const next = {};
     LANGS.forEach((lang) => {
       const extra = {};
-      Object.entries((c.texts && c.texts[lang]) || {}).forEach(([k, v]) => {
-        if (filled(v)) extra[k.replace('_', '.')] = v;
+      // content/ui.json: { lang: { section: { field: text } } } -> "section.field" (field "_" = ".")
+      Object.entries((c.ui && c.ui[lang]) || {}).forEach(([section, fields]) => {
+        Object.entries(fields || {}).forEach(([field, v]) => {
+          if (filled(v)) extra[section + '.' + field.replace(/_/g, '.')] = v;
+        });
       });
+      const site = c.site || {};
+      (site.stats || []).forEach((st, i) => {
+        if (st.label && filled(st.label[lang])) extra['stat.' + i] = st.label[lang];
+      });
+      if (site.announcement && site.announcement.text && filled(site.announcement.text[lang])) {
+        extra['announce.text'] = site.announcement.text[lang];
+      }
       services.forEach((s) => {
         if (filled(s.name[lang])) extra['svc.' + s.id + '.name'] = s.name[lang];
         if (filled(s.description[lang])) extra['svc.' + s.id + '.desc'] = s.description[lang];
@@ -86,13 +105,16 @@
   function applyContent(c) {
     const settings = c.settings || {};
     const images = c.images || {};
+    const site = c.site || {};
+    const look = site.appearance || {};
     const services = buildServices(c.services && c.services.services);
 
     window.MIREYA_CONFIG = Object.freeze({
       ...BASE_CONFIG,
       ...Object.fromEntries(Object.entries(settings).filter(([, v]) => filled(v))),
       showPricing: Boolean(settings.showPricing),
-      heroVideo: images.heroVideo || ''
+      heroVideo: look.heroVideo === false ? '' : (images.heroVideo || ''),
+      defaultLang: LANGS.includes(site.defaultLang) ? site.defaultLang : (BASE_CONFIG.defaultLang || 'sq')
     });
 
     window.MIREYA_DATA = Object.freeze({
@@ -102,7 +124,11 @@
         .map((s) => Object.freeze({ id: s.id, img: s.img, pos: s.pos }))),
       gallery: Object.freeze(((c.gallery && c.gallery.items) || []).filter((g) => g && g.image)
         .map((g, i) => Object.freeze({ src: g.image, key: 'gal.' + i, tall: Boolean(g.tall) }))),
-      reviews: Object.freeze(buildReviews(c.reviews && c.reviews.items))
+      reviews: Object.freeze(buildReviews(c.reviews && c.reviews.items)),
+      stats: Object.freeze((site.stats || []).map((st, i) => Object.freeze({
+        value: filled(st.value) ? String(st.value) : String(services.length),
+        key: 'stat.' + i
+      })))
     });
 
     document.querySelectorAll('[data-img]').forEach((img) => {
@@ -118,7 +144,61 @@
         (n.closest('li') || n).hidden = true;
       });
     }
+    applySite(site);
     return services;
+  }
+
+  function hideTarget(selector) {
+    document.querySelectorAll(selector).forEach((n) => { n.hidden = true; });
+    if (selector.startsWith('#')) {
+      document.querySelectorAll('a[href="' + selector + '"]').forEach((a) => { (a.closest('li') || a).hidden = true; });
+    }
+  }
+
+  // Booking hidden: its buttons lead to the contact section instead
+  function redirectBookingLinks(toContact) {
+    document.querySelectorAll('a[href="#booking"]').forEach((a) => {
+      a.setAttribute('href', toContact ? '#contact' : '#top');
+      a.hidden = false;
+      const li = a.closest('li');
+      if (li) li.hidden = false;
+    });
+  }
+
+  function applyAnnouncement(ann) {
+    const bar = document.querySelector('[data-announce]');
+    if (!bar || !ann || !ann.enabled) return;
+    const link = bar.querySelector('[data-announce-link]');
+    if (filled(ann.link)) {
+      link.href = ann.link;
+      if (/^https?:/.test(ann.link)) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      }
+    }
+    bar.hidden = false;
+    document.documentElement.classList.add('has-announce');
+  }
+
+  // "Görünüm ve Bölümler" panel options
+  function applySite(site) {
+    const sections = site.sections || {};
+    Object.entries(SECTION_TARGETS).forEach(([name, selector]) => {
+      if (sections[name] === false) hideTarget(selector);
+    });
+    if (sections.booking === false) redirectBookingLinks(sections.contact !== false);
+
+    const look = site.appearance || {};
+    const accent = ACCENTS[look.accent];
+    if (accent) {
+      const root = document.documentElement.style;
+      ['--gold', '--gold-light', '--gold-deep', '--gold-grad'].forEach((v, i) => root.setProperty(v, accent[i]));
+    }
+    if (look.animations === false) document.documentElement.classList.add('no-motion');
+    if (look.whatsappButton === false) {
+      document.querySelectorAll('.wa-float').forEach((n) => { n.hidden = true; });
+    }
+    applyAnnouncement(site.announcement);
   }
 
   async function start() {

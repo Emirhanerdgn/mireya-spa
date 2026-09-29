@@ -22,7 +22,7 @@
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: calc(var(--header-h) + 3rem) 0 6rem;
+  padding: calc(var(--header-h) + var(--announce-h) + 3rem) 0 6rem;
   background:
     radial-gradient(ellipse 60% 55% at 78% 38%, rgba(201, 165, 94, 0.14), transparent 70%),
     radial-gradient(ellipse 50% 40% at 10% 90%, rgba(110, 44, 44, 0.16), transparent 70%),

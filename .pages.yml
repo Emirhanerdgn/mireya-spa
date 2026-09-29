@@ -255,120 +255,1740 @@ content:
             label: "Yorum"
             type: text
 
-  - name: texts
+  - name: ui
     label: "Sayfa Metinleri"
     type: file
-    path: content/texts.json
+    path: content/ui.json
     fields:
       - name: sq
         label: "Arnavutça"
         type: object
         fields:
-          - name: hero_t1
-            label: "Giriş başlığı – 1. satır"
-            type: string
-          - name: hero_t2
-            label: "Giriş başlığı – 2. satır (altın renk)"
-            type: string
-          - name: hero_sub
-            label: "Giriş alt yazısı"
-            type: text
-          - name: about_t1
-            label: "Hakkımızda başlığı – 1. kısım"
-            type: string
-          - name: about_t2
-            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
-            type: string
-          - name: about_p1
-            label: "Hakkımızda – 1. paragraf"
-            type: text
-          - name: about_p2
-            label: "Hakkımızda – 2. paragraf"
-            type: text
-          - name: menu_note
-            label: "Masaj menüsü alt notu"
-            type: text
+          - name: meta
+            label: "Google (SEO) başlığı ve açıklaması"
+            type: object
+            fields:
+              - name: title
+                label: "Mireya — Massage Therapy & Wellness | Kosova"
+                type: string
+              - name: desc
+                label: "Mireya Massage Therapy & Wellness: İsveç, derin doku…"
+                type: text
+          - name: nav
+            label: "Üst menü"
+            type: object
+            fields:
+              - name: about
+                label: "Hakkımızda"
+                type: string
+              - name: rituals
+                label: "Ritüeller"
+                type: string
+              - name: menu
+                label: "Masaj Menüsü"
+                type: string
+              - name: gallery
+                label: "Galeri"
+                type: string
+              - name: reviews
+                label: "Yorumlar"
+                type: string
+              - name: contact
+                label: "İletişim"
+                type: string
+              - name: book
+                label: "Randevu Al"
+                type: string
+              - name: open
+                label: "Menüyü aç"
+                type: string
+              - name: close
+                label: "Menüyü kapat"
+                type: string
+          - name: hero
+            label: "Giriş bölümü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Massage Therapy & Wellness"
+                type: string
+              - name: t1
+                label: "Bedeninize bir mola,"
+                type: string
+              - name: t2
+                label: "ruhunuza bir ritüel."
+                type: string
+              - name: sub
+                label: "Mireya’da her seans; sıcak ahşap, yumuşak ışık ve uz…"
+                type: text
+              - name: cta1
+                label: "Randevu Al"
+                type: string
+              - name: cta2
+                label: "Masaj Menüsü"
+                type: string
+              - name: badge
+                label: "Kişiye özel terapi odaları"
+                type: string
+              - name: scroll
+                label: "Keşfet"
+                type: string
+          - name: about
+            label: "Hakkımızda"
+            type: object
+            fields:
+              - name: kicker
+                label: "Hakkımızda"
+                type: string
+              - name: t1
+                label: "Şehrin ortasında"
+                type: string
+              - name: t2
+                label: "sessiz bir sığınak."
+                type: string
+              - name: p1
+                label: "Mireya, günün temposundan sıyrılıp kendinize dönebil…"
+                type: text
+              - name: p2
+                label: "Deneyimli terapistlerimiz her seansa kısa bir danışm…"
+                type: text
+              - name: f1t
+                label: "Uzman terapistler"
+                type: string
+              - name: f1d
+                label: "Sertifikalı, deneyimli ve güler yüzlü ekip."
+                type: string
+              - name: f2t
+                label: "Kusursuz hijyen"
+                type: string
+              - name: f2d
+                label: "Her misafir için yeni havlu ve sterilize alan."
+                type: string
+              - name: f3t
+                label: "Premium doğal yağlar"
+                type: string
+              - name: f3d
+                label: "Soğuk sıkım bitkisel ve saf esansiyel yağlar."
+                type: string
+              - name: f4t
+                label: "Özel odalar"
+                type: string
+              - name: f4d
+                label: "Tek kişilik ve çiftlere özel sakin odalar."
+                type: string
+              - name: sign
+                label: "Mireya Ekibi"
+                type: string
+          - name: rituals
+            label: "İmza Ritüeller"
+            type: object
+            fields:
+              - name: kicker
+                label: "İmza Ritüeller"
+                type: string
+              - name: t1
+                label: "Mireya’nın"
+                type: string
+              - name: t2
+                label: "en sevilenleri"
+                type: string
+              - name: lead
+                label: "Misafirlerimizin tekrar tekrar döndüğü, özenle kurgu…"
+                type: string
+              - name: choose
+                label: "Bu ritüeli seç"
+                type: string
+              - name: from
+                label: "{p} ve üzeri"
+                type: string
+          - name: menu
+            label: "Masaj Menüsü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Masaj Menüsü"
+                type: string
+              - name: t1
+                label: "Size iyi gelecek"
+                type: string
+              - name: t2
+                label: "dokunuşu seçin"
+                type: string
+              - name: lead
+                label: "Kararsız mısınız? Terapistimiz seans öncesinde size …"
+                type: text
+              - name: cat_classic
+                label: "Klasik & Terapötik"
+                type: string
+              - name: cat_eastern
+                label: "Uzakdoğu & Aromatik"
+                type: string
+              - name: cat_signature
+                label: "Özel & İmza"
+                type: string
+              - name: min
+                label: "dk"
+                type: string
+              - name: book
+                label: "Seç"
+                type: string
+              - name: note
+                label: "Size en uygun masajı ve seans süresini birlikte beli…"
+                type: text
+          - name: journey
+            label: "Deneyim adımları"
+            type: object
+            fields:
+              - name: kicker
+                label: "Deneyim"
+                type: string
+              - name: t1
+                label: "Kapıdan girdiğiniz"
+                type: string
+              - name: t2
+                label: "andan itibaren"
+                type: string
+              - name: s1t
+                label: "Karşılama"
+                type: string
+              - name: s1d
+                label: "Bitki çayı ve sıcak havlu ile lounge’da kısa bir nefes."
+                type: string
+              - name: s2t
+                label: "Danışma"
+                type: string
+              - name: s2d
+                label: "Beklentinizi, hassas bölgeleri ve tercih ettiğiniz b…"
+                type: string
+              - name: s3t
+                label: "Terapi"
+                type: string
+              - name: s3d
+                label: "Loş ışık, sakin müzik ve size özel seçilmiş yağlarla…"
+                type: string
+              - name: s4t
+                label: "Dinlenme"
+                type: string
+              - name: s4d
+                label: "Seans sonrası acele etmeden, kendi ritminizde dönüş."
+                type: string
+          - name: gallery
+            label: "Galeri"
+            type: object
+            fields:
+              - name: kicker
+                label: "Galeri"
+                type: string
+              - name: t1
+                label: "Mireya’dan"
+                type: string
+              - name: t2
+                label: "kareler"
+                type: string
+              - name: close
+                label: "Kapat"
+                type: string
+              - name: prev
+                label: "Önceki"
+                type: string
+              - name: next
+                label: "Sonraki"
+                type: string
+          - name: reviews
+            label: "Yorumlar"
+            type: object
+            fields:
+              - name: kicker
+                label: "Misafir Yorumları"
+                type: string
+              - name: t1
+                label: "Onların"
+                type: string
+              - name: t2
+                label: "sözleriyle"
+                type: string
+              - name: sample
+                label: "Örnek yorumlar — yayın öncesi önizleme"
+                type: string
+              - name: write
+                label: "Google’da yorum yazın"
+                type: string
+              - name: prev
+                label: "Önceki yorum"
+                type: string
+              - name: next
+                label: "Sonraki yorum"
+                type: string
+          - name: book
+            label: "Rezervasyon ve form"
+            type: object
+            fields:
+              - name: kicker
+                label: "Rezervasyon"
+                type: string
+              - name: t1
+                label: "Zamanınızı"
+                type: string
+              - name: t2
+                label: "ayıralım"
+                type: string
+              - name: lead
+                label: "Formu doldurun, talebiniz WhatsApp üzerinden bize ul…"
+                type: text
+              - name: leadCal
+                label: "Size uygun gün ve saati seçin; randevunuz anında tak…"
+                type: text
+              - name: name
+                label: "Ad Soyad"
+                type: string
+              - name: phone
+                label: "Telefon"
+                type: string
+              - name: service
+                label: "Hizmet"
+                type: string
+              - name: servicePh
+                label: "Masaj seçin"
+                type: string
+              - name: date
+                label: "Tarih"
+                type: string
+              - name: time
+                label: "Saat"
+                type: string
+              - name: timePh
+                label: "Saat seçin"
+                type: string
+              - name: guests
+                label: "Kişi sayısı"
+                type: string
+              - name: g1
+                label: "1 kişi"
+                type: string
+              - name: g2
+                label: "2 kişi (çift)"
+                type: string
+              - name: note
+                label: "Not"
+                type: string
+              - name: notePh
+                label: "Hassas bölgeler, terapist tercihi vb."
+                type: string
+              - name: submit
+                label: "Randevu Talebi Gönder"
+                type: string
+              - name: direct
+                label: "Doğrudan WhatsApp’tan yazın"
+                type: string
+              - name: privacy
+                label: "Bilgileriniz yalnızca randevunuz için kullanılır."
+                type: string
+              - name: errRequired
+                label: "Lütfen bu alanı doldurun."
+                type: string
+              - name: errPhone
+                label: "Geçerli bir telefon numarası girin."
+                type: string
+              - name: errDate
+                label: "Geçmiş bir tarih seçilemez."
+                type: string
+              - name: ok
+                label: "Teşekkürler! Talebiniz alındı, en kısa sürede sizinl…"
+                type: text
+              - name: okWa
+                label: "Mesajınız hazır — göndermek için WhatsApp’ı açın:"
+                type: string
+              - name: soon
+                label: "Online rezervasyon çok yakında aktif olacak. Şimdili…"
+                type: text
+              - name: fail
+                label: "Gönderilemedi. Lütfen tekrar deneyin ya da WhatsApp’…"
+                type: string
+              - name: msgIntro
+                label: "Merhaba Mireya, randevu talebim:"
+                type: string
+          - name: contact
+            label: "İletişim"
+            type: object
+            fields:
+              - name: kicker
+                label: "İletişim"
+                type: string
+              - name: t1
+                label: "Sizi"
+                type: string
+              - name: t2
+                label: "bekliyoruz"
+                type: string
+              - name: address
+                label: "Adres"
+                type: string
+              - name: hours
+                label: "Çalışma saatleri"
+                type: string
+              - name: weekdays
+                label: "Hafta içi"
+                type: string
+              - name: weekend
+                label: "Hafta sonu"
+                type: string
+              - name: phone
+                label: "Telefon & WhatsApp"
+                type: string
+              - name: follow
+                label: "Bizi takip edin"
+                type: string
+              - name: soon
+                label: "Çok yakında"
+                type: string
+              - name: directions
+                label: "Yol tarifi al"
+                type: string
+          - name: footer
+            label: "Alt bilgi"
+            type: object
+            fields:
+              - name: tag
+                label: "Kendinize ayırdığınız en güzel zaman."
+                type: string
+              - name: rights
+                label: "Tüm hakları saklıdır."
+                type: string
+          - name: wa
+            label: "WhatsApp butonu"
+            type: object
+            fields:
+              - name: float
+                label: "WhatsApp ile yazın"
+                type: string
       - name: sr
         label: "Sırpça"
         type: object
         fields:
-          - name: hero_t1
-            label: "Giriş başlığı – 1. satır"
-            type: string
-          - name: hero_t2
-            label: "Giriş başlığı – 2. satır (altın renk)"
-            type: string
-          - name: hero_sub
-            label: "Giriş alt yazısı"
-            type: text
-          - name: about_t1
-            label: "Hakkımızda başlığı – 1. kısım"
-            type: string
-          - name: about_t2
-            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
-            type: string
-          - name: about_p1
-            label: "Hakkımızda – 1. paragraf"
-            type: text
-          - name: about_p2
-            label: "Hakkımızda – 2. paragraf"
-            type: text
-          - name: menu_note
-            label: "Masaj menüsü alt notu"
-            type: text
+          - name: meta
+            label: "Google (SEO) başlığı ve açıklaması"
+            type: object
+            fields:
+              - name: title
+                label: "Mireya — Massage Therapy & Wellness | Kosova"
+                type: string
+              - name: desc
+                label: "Mireya Massage Therapy & Wellness: İsveç, derin doku…"
+                type: text
+          - name: nav
+            label: "Üst menü"
+            type: object
+            fields:
+              - name: about
+                label: "Hakkımızda"
+                type: string
+              - name: rituals
+                label: "Ritüeller"
+                type: string
+              - name: menu
+                label: "Masaj Menüsü"
+                type: string
+              - name: gallery
+                label: "Galeri"
+                type: string
+              - name: reviews
+                label: "Yorumlar"
+                type: string
+              - name: contact
+                label: "İletişim"
+                type: string
+              - name: book
+                label: "Randevu Al"
+                type: string
+              - name: open
+                label: "Menüyü aç"
+                type: string
+              - name: close
+                label: "Menüyü kapat"
+                type: string
+          - name: hero
+            label: "Giriş bölümü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Massage Therapy & Wellness"
+                type: string
+              - name: t1
+                label: "Bedeninize bir mola,"
+                type: string
+              - name: t2
+                label: "ruhunuza bir ritüel."
+                type: string
+              - name: sub
+                label: "Mireya’da her seans; sıcak ahşap, yumuşak ışık ve uz…"
+                type: text
+              - name: cta1
+                label: "Randevu Al"
+                type: string
+              - name: cta2
+                label: "Masaj Menüsü"
+                type: string
+              - name: badge
+                label: "Kişiye özel terapi odaları"
+                type: string
+              - name: scroll
+                label: "Keşfet"
+                type: string
+          - name: about
+            label: "Hakkımızda"
+            type: object
+            fields:
+              - name: kicker
+                label: "Hakkımızda"
+                type: string
+              - name: t1
+                label: "Şehrin ortasında"
+                type: string
+              - name: t2
+                label: "sessiz bir sığınak."
+                type: string
+              - name: p1
+                label: "Mireya, günün temposundan sıyrılıp kendinize dönebil…"
+                type: text
+              - name: p2
+                label: "Deneyimli terapistlerimiz her seansa kısa bir danışm…"
+                type: text
+              - name: f1t
+                label: "Uzman terapistler"
+                type: string
+              - name: f1d
+                label: "Sertifikalı, deneyimli ve güler yüzlü ekip."
+                type: string
+              - name: f2t
+                label: "Kusursuz hijyen"
+                type: string
+              - name: f2d
+                label: "Her misafir için yeni havlu ve sterilize alan."
+                type: string
+              - name: f3t
+                label: "Premium doğal yağlar"
+                type: string
+              - name: f3d
+                label: "Soğuk sıkım bitkisel ve saf esansiyel yağlar."
+                type: string
+              - name: f4t
+                label: "Özel odalar"
+                type: string
+              - name: f4d
+                label: "Tek kişilik ve çiftlere özel sakin odalar."
+                type: string
+              - name: sign
+                label: "Mireya Ekibi"
+                type: string
+          - name: rituals
+            label: "İmza Ritüeller"
+            type: object
+            fields:
+              - name: kicker
+                label: "İmza Ritüeller"
+                type: string
+              - name: t1
+                label: "Mireya’nın"
+                type: string
+              - name: t2
+                label: "en sevilenleri"
+                type: string
+              - name: lead
+                label: "Misafirlerimizin tekrar tekrar döndüğü, özenle kurgu…"
+                type: string
+              - name: choose
+                label: "Bu ritüeli seç"
+                type: string
+              - name: from
+                label: "{p} ve üzeri"
+                type: string
+          - name: menu
+            label: "Masaj Menüsü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Masaj Menüsü"
+                type: string
+              - name: t1
+                label: "Size iyi gelecek"
+                type: string
+              - name: t2
+                label: "dokunuşu seçin"
+                type: string
+              - name: lead
+                label: "Kararsız mısınız? Terapistimiz seans öncesinde size …"
+                type: text
+              - name: cat_classic
+                label: "Klasik & Terapötik"
+                type: string
+              - name: cat_eastern
+                label: "Uzakdoğu & Aromatik"
+                type: string
+              - name: cat_signature
+                label: "Özel & İmza"
+                type: string
+              - name: min
+                label: "dk"
+                type: string
+              - name: book
+                label: "Seç"
+                type: string
+              - name: note
+                label: "Size en uygun masajı ve seans süresini birlikte beli…"
+                type: text
+          - name: journey
+            label: "Deneyim adımları"
+            type: object
+            fields:
+              - name: kicker
+                label: "Deneyim"
+                type: string
+              - name: t1
+                label: "Kapıdan girdiğiniz"
+                type: string
+              - name: t2
+                label: "andan itibaren"
+                type: string
+              - name: s1t
+                label: "Karşılama"
+                type: string
+              - name: s1d
+                label: "Bitki çayı ve sıcak havlu ile lounge’da kısa bir nefes."
+                type: string
+              - name: s2t
+                label: "Danışma"
+                type: string
+              - name: s2d
+                label: "Beklentinizi, hassas bölgeleri ve tercih ettiğiniz b…"
+                type: string
+              - name: s3t
+                label: "Terapi"
+                type: string
+              - name: s3d
+                label: "Loş ışık, sakin müzik ve size özel seçilmiş yağlarla…"
+                type: string
+              - name: s4t
+                label: "Dinlenme"
+                type: string
+              - name: s4d
+                label: "Seans sonrası acele etmeden, kendi ritminizde dönüş."
+                type: string
+          - name: gallery
+            label: "Galeri"
+            type: object
+            fields:
+              - name: kicker
+                label: "Galeri"
+                type: string
+              - name: t1
+                label: "Mireya’dan"
+                type: string
+              - name: t2
+                label: "kareler"
+                type: string
+              - name: close
+                label: "Kapat"
+                type: string
+              - name: prev
+                label: "Önceki"
+                type: string
+              - name: next
+                label: "Sonraki"
+                type: string
+          - name: reviews
+            label: "Yorumlar"
+            type: object
+            fields:
+              - name: kicker
+                label: "Misafir Yorumları"
+                type: string
+              - name: t1
+                label: "Onların"
+                type: string
+              - name: t2
+                label: "sözleriyle"
+                type: string
+              - name: sample
+                label: "Örnek yorumlar — yayın öncesi önizleme"
+                type: string
+              - name: write
+                label: "Google’da yorum yazın"
+                type: string
+              - name: prev
+                label: "Önceki yorum"
+                type: string
+              - name: next
+                label: "Sonraki yorum"
+                type: string
+          - name: book
+            label: "Rezervasyon ve form"
+            type: object
+            fields:
+              - name: kicker
+                label: "Rezervasyon"
+                type: string
+              - name: t1
+                label: "Zamanınızı"
+                type: string
+              - name: t2
+                label: "ayıralım"
+                type: string
+              - name: lead
+                label: "Formu doldurun, talebiniz WhatsApp üzerinden bize ul…"
+                type: text
+              - name: leadCal
+                label: "Size uygun gün ve saati seçin; randevunuz anında tak…"
+                type: text
+              - name: name
+                label: "Ad Soyad"
+                type: string
+              - name: phone
+                label: "Telefon"
+                type: string
+              - name: service
+                label: "Hizmet"
+                type: string
+              - name: servicePh
+                label: "Masaj seçin"
+                type: string
+              - name: date
+                label: "Tarih"
+                type: string
+              - name: time
+                label: "Saat"
+                type: string
+              - name: timePh
+                label: "Saat seçin"
+                type: string
+              - name: guests
+                label: "Kişi sayısı"
+                type: string
+              - name: g1
+                label: "1 kişi"
+                type: string
+              - name: g2
+                label: "2 kişi (çift)"
+                type: string
+              - name: note
+                label: "Not"
+                type: string
+              - name: notePh
+                label: "Hassas bölgeler, terapist tercihi vb."
+                type: string
+              - name: submit
+                label: "Randevu Talebi Gönder"
+                type: string
+              - name: direct
+                label: "Doğrudan WhatsApp’tan yazın"
+                type: string
+              - name: privacy
+                label: "Bilgileriniz yalnızca randevunuz için kullanılır."
+                type: string
+              - name: errRequired
+                label: "Lütfen bu alanı doldurun."
+                type: string
+              - name: errPhone
+                label: "Geçerli bir telefon numarası girin."
+                type: string
+              - name: errDate
+                label: "Geçmiş bir tarih seçilemez."
+                type: string
+              - name: ok
+                label: "Teşekkürler! Talebiniz alındı, en kısa sürede sizinl…"
+                type: text
+              - name: okWa
+                label: "Mesajınız hazır — göndermek için WhatsApp’ı açın:"
+                type: string
+              - name: soon
+                label: "Online rezervasyon çok yakında aktif olacak. Şimdili…"
+                type: text
+              - name: fail
+                label: "Gönderilemedi. Lütfen tekrar deneyin ya da WhatsApp’…"
+                type: string
+              - name: msgIntro
+                label: "Merhaba Mireya, randevu talebim:"
+                type: string
+          - name: contact
+            label: "İletişim"
+            type: object
+            fields:
+              - name: kicker
+                label: "İletişim"
+                type: string
+              - name: t1
+                label: "Sizi"
+                type: string
+              - name: t2
+                label: "bekliyoruz"
+                type: string
+              - name: address
+                label: "Adres"
+                type: string
+              - name: hours
+                label: "Çalışma saatleri"
+                type: string
+              - name: weekdays
+                label: "Hafta içi"
+                type: string
+              - name: weekend
+                label: "Hafta sonu"
+                type: string
+              - name: phone
+                label: "Telefon & WhatsApp"
+                type: string
+              - name: follow
+                label: "Bizi takip edin"
+                type: string
+              - name: soon
+                label: "Çok yakında"
+                type: string
+              - name: directions
+                label: "Yol tarifi al"
+                type: string
+          - name: footer
+            label: "Alt bilgi"
+            type: object
+            fields:
+              - name: tag
+                label: "Kendinize ayırdığınız en güzel zaman."
+                type: string
+              - name: rights
+                label: "Tüm hakları saklıdır."
+                type: string
+          - name: wa
+            label: "WhatsApp butonu"
+            type: object
+            fields:
+              - name: float
+                label: "WhatsApp ile yazın"
+                type: string
       - name: en
         label: "İngilizce"
         type: object
         fields:
-          - name: hero_t1
-            label: "Giriş başlığı – 1. satır"
-            type: string
-          - name: hero_t2
-            label: "Giriş başlığı – 2. satır (altın renk)"
-            type: string
-          - name: hero_sub
-            label: "Giriş alt yazısı"
-            type: text
-          - name: about_t1
-            label: "Hakkımızda başlığı – 1. kısım"
-            type: string
-          - name: about_t2
-            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
-            type: string
-          - name: about_p1
-            label: "Hakkımızda – 1. paragraf"
-            type: text
-          - name: about_p2
-            label: "Hakkımızda – 2. paragraf"
-            type: text
-          - name: menu_note
-            label: "Masaj menüsü alt notu"
-            type: text
+          - name: meta
+            label: "Google (SEO) başlığı ve açıklaması"
+            type: object
+            fields:
+              - name: title
+                label: "Mireya — Massage Therapy & Wellness | Kosova"
+                type: string
+              - name: desc
+                label: "Mireya Massage Therapy & Wellness: İsveç, derin doku…"
+                type: text
+          - name: nav
+            label: "Üst menü"
+            type: object
+            fields:
+              - name: about
+                label: "Hakkımızda"
+                type: string
+              - name: rituals
+                label: "Ritüeller"
+                type: string
+              - name: menu
+                label: "Masaj Menüsü"
+                type: string
+              - name: gallery
+                label: "Galeri"
+                type: string
+              - name: reviews
+                label: "Yorumlar"
+                type: string
+              - name: contact
+                label: "İletişim"
+                type: string
+              - name: book
+                label: "Randevu Al"
+                type: string
+              - name: open
+                label: "Menüyü aç"
+                type: string
+              - name: close
+                label: "Menüyü kapat"
+                type: string
+          - name: hero
+            label: "Giriş bölümü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Massage Therapy & Wellness"
+                type: string
+              - name: t1
+                label: "Bedeninize bir mola,"
+                type: string
+              - name: t2
+                label: "ruhunuza bir ritüel."
+                type: string
+              - name: sub
+                label: "Mireya’da her seans; sıcak ahşap, yumuşak ışık ve uz…"
+                type: text
+              - name: cta1
+                label: "Randevu Al"
+                type: string
+              - name: cta2
+                label: "Masaj Menüsü"
+                type: string
+              - name: badge
+                label: "Kişiye özel terapi odaları"
+                type: string
+              - name: scroll
+                label: "Keşfet"
+                type: string
+          - name: about
+            label: "Hakkımızda"
+            type: object
+            fields:
+              - name: kicker
+                label: "Hakkımızda"
+                type: string
+              - name: t1
+                label: "Şehrin ortasında"
+                type: string
+              - name: t2
+                label: "sessiz bir sığınak."
+                type: string
+              - name: p1
+                label: "Mireya, günün temposundan sıyrılıp kendinize dönebil…"
+                type: text
+              - name: p2
+                label: "Deneyimli terapistlerimiz her seansa kısa bir danışm…"
+                type: text
+              - name: f1t
+                label: "Uzman terapistler"
+                type: string
+              - name: f1d
+                label: "Sertifikalı, deneyimli ve güler yüzlü ekip."
+                type: string
+              - name: f2t
+                label: "Kusursuz hijyen"
+                type: string
+              - name: f2d
+                label: "Her misafir için yeni havlu ve sterilize alan."
+                type: string
+              - name: f3t
+                label: "Premium doğal yağlar"
+                type: string
+              - name: f3d
+                label: "Soğuk sıkım bitkisel ve saf esansiyel yağlar."
+                type: string
+              - name: f4t
+                label: "Özel odalar"
+                type: string
+              - name: f4d
+                label: "Tek kişilik ve çiftlere özel sakin odalar."
+                type: string
+              - name: sign
+                label: "Mireya Ekibi"
+                type: string
+          - name: rituals
+            label: "İmza Ritüeller"
+            type: object
+            fields:
+              - name: kicker
+                label: "İmza Ritüeller"
+                type: string
+              - name: t1
+                label: "Mireya’nın"
+                type: string
+              - name: t2
+                label: "en sevilenleri"
+                type: string
+              - name: lead
+                label: "Misafirlerimizin tekrar tekrar döndüğü, özenle kurgu…"
+                type: string
+              - name: choose
+                label: "Bu ritüeli seç"
+                type: string
+              - name: from
+                label: "{p} ve üzeri"
+                type: string
+          - name: menu
+            label: "Masaj Menüsü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Masaj Menüsü"
+                type: string
+              - name: t1
+                label: "Size iyi gelecek"
+                type: string
+              - name: t2
+                label: "dokunuşu seçin"
+                type: string
+              - name: lead
+                label: "Kararsız mısınız? Terapistimiz seans öncesinde size …"
+                type: text
+              - name: cat_classic
+                label: "Klasik & Terapötik"
+                type: string
+              - name: cat_eastern
+                label: "Uzakdoğu & Aromatik"
+                type: string
+              - name: cat_signature
+                label: "Özel & İmza"
+                type: string
+              - name: min
+                label: "dk"
+                type: string
+              - name: book
+                label: "Seç"
+                type: string
+              - name: note
+                label: "Size en uygun masajı ve seans süresini birlikte beli…"
+                type: text
+          - name: journey
+            label: "Deneyim adımları"
+            type: object
+            fields:
+              - name: kicker
+                label: "Deneyim"
+                type: string
+              - name: t1
+                label: "Kapıdan girdiğiniz"
+                type: string
+              - name: t2
+                label: "andan itibaren"
+                type: string
+              - name: s1t
+                label: "Karşılama"
+                type: string
+              - name: s1d
+                label: "Bitki çayı ve sıcak havlu ile lounge’da kısa bir nefes."
+                type: string
+              - name: s2t
+                label: "Danışma"
+                type: string
+              - name: s2d
+                label: "Beklentinizi, hassas bölgeleri ve tercih ettiğiniz b…"
+                type: string
+              - name: s3t
+                label: "Terapi"
+                type: string
+              - name: s3d
+                label: "Loş ışık, sakin müzik ve size özel seçilmiş yağlarla…"
+                type: string
+              - name: s4t
+                label: "Dinlenme"
+                type: string
+              - name: s4d
+                label: "Seans sonrası acele etmeden, kendi ritminizde dönüş."
+                type: string
+          - name: gallery
+            label: "Galeri"
+            type: object
+            fields:
+              - name: kicker
+                label: "Galeri"
+                type: string
+              - name: t1
+                label: "Mireya’dan"
+                type: string
+              - name: t2
+                label: "kareler"
+                type: string
+              - name: close
+                label: "Kapat"
+                type: string
+              - name: prev
+                label: "Önceki"
+                type: string
+              - name: next
+                label: "Sonraki"
+                type: string
+          - name: reviews
+            label: "Yorumlar"
+            type: object
+            fields:
+              - name: kicker
+                label: "Misafir Yorumları"
+                type: string
+              - name: t1
+                label: "Onların"
+                type: string
+              - name: t2
+                label: "sözleriyle"
+                type: string
+              - name: sample
+                label: "Örnek yorumlar — yayın öncesi önizleme"
+                type: string
+              - name: write
+                label: "Google’da yorum yazın"
+                type: string
+              - name: prev
+                label: "Önceki yorum"
+                type: string
+              - name: next
+                label: "Sonraki yorum"
+                type: string
+          - name: book
+            label: "Rezervasyon ve form"
+            type: object
+            fields:
+              - name: kicker
+                label: "Rezervasyon"
+                type: string
+              - name: t1
+                label: "Zamanınızı"
+                type: string
+              - name: t2
+                label: "ayıralım"
+                type: string
+              - name: lead
+                label: "Formu doldurun, talebiniz WhatsApp üzerinden bize ul…"
+                type: text
+              - name: leadCal
+                label: "Size uygun gün ve saati seçin; randevunuz anında tak…"
+                type: text
+              - name: name
+                label: "Ad Soyad"
+                type: string
+              - name: phone
+                label: "Telefon"
+                type: string
+              - name: service
+                label: "Hizmet"
+                type: string
+              - name: servicePh
+                label: "Masaj seçin"
+                type: string
+              - name: date
+                label: "Tarih"
+                type: string
+              - name: time
+                label: "Saat"
+                type: string
+              - name: timePh
+                label: "Saat seçin"
+                type: string
+              - name: guests
+                label: "Kişi sayısı"
+                type: string
+              - name: g1
+                label: "1 kişi"
+                type: string
+              - name: g2
+                label: "2 kişi (çift)"
+                type: string
+              - name: note
+                label: "Not"
+                type: string
+              - name: notePh
+                label: "Hassas bölgeler, terapist tercihi vb."
+                type: string
+              - name: submit
+                label: "Randevu Talebi Gönder"
+                type: string
+              - name: direct
+                label: "Doğrudan WhatsApp’tan yazın"
+                type: string
+              - name: privacy
+                label: "Bilgileriniz yalnızca randevunuz için kullanılır."
+                type: string
+              - name: errRequired
+                label: "Lütfen bu alanı doldurun."
+                type: string
+              - name: errPhone
+                label: "Geçerli bir telefon numarası girin."
+                type: string
+              - name: errDate
+                label: "Geçmiş bir tarih seçilemez."
+                type: string
+              - name: ok
+                label: "Teşekkürler! Talebiniz alındı, en kısa sürede sizinl…"
+                type: text
+              - name: okWa
+                label: "Mesajınız hazır — göndermek için WhatsApp’ı açın:"
+                type: string
+              - name: soon
+                label: "Online rezervasyon çok yakında aktif olacak. Şimdili…"
+                type: text
+              - name: fail
+                label: "Gönderilemedi. Lütfen tekrar deneyin ya da WhatsApp’…"
+                type: string
+              - name: msgIntro
+                label: "Merhaba Mireya, randevu talebim:"
+                type: string
+          - name: contact
+            label: "İletişim"
+            type: object
+            fields:
+              - name: kicker
+                label: "İletişim"
+                type: string
+              - name: t1
+                label: "Sizi"
+                type: string
+              - name: t2
+                label: "bekliyoruz"
+                type: string
+              - name: address
+                label: "Adres"
+                type: string
+              - name: hours
+                label: "Çalışma saatleri"
+                type: string
+              - name: weekdays
+                label: "Hafta içi"
+                type: string
+              - name: weekend
+                label: "Hafta sonu"
+                type: string
+              - name: phone
+                label: "Telefon & WhatsApp"
+                type: string
+              - name: follow
+                label: "Bizi takip edin"
+                type: string
+              - name: soon
+                label: "Çok yakında"
+                type: string
+              - name: directions
+                label: "Yol tarifi al"
+                type: string
+          - name: footer
+            label: "Alt bilgi"
+            type: object
+            fields:
+              - name: tag
+                label: "Kendinize ayırdığınız en güzel zaman."
+                type: string
+              - name: rights
+                label: "Tüm hakları saklıdır."
+                type: string
+          - name: wa
+            label: "WhatsApp butonu"
+            type: object
+            fields:
+              - name: float
+                label: "WhatsApp ile yazın"
+                type: string
       - name: tr
         label: "Türkçe"
         type: object
         fields:
-          - name: hero_t1
-            label: "Giriş başlığı – 1. satır"
+          - name: meta
+            label: "Google (SEO) başlığı ve açıklaması"
+            type: object
+            fields:
+              - name: title
+                label: "Mireya — Massage Therapy & Wellness | Kosova"
+                type: string
+              - name: desc
+                label: "Mireya Massage Therapy & Wellness: İsveç, derin doku…"
+                type: text
+          - name: nav
+            label: "Üst menü"
+            type: object
+            fields:
+              - name: about
+                label: "Hakkımızda"
+                type: string
+              - name: rituals
+                label: "Ritüeller"
+                type: string
+              - name: menu
+                label: "Masaj Menüsü"
+                type: string
+              - name: gallery
+                label: "Galeri"
+                type: string
+              - name: reviews
+                label: "Yorumlar"
+                type: string
+              - name: contact
+                label: "İletişim"
+                type: string
+              - name: book
+                label: "Randevu Al"
+                type: string
+              - name: open
+                label: "Menüyü aç"
+                type: string
+              - name: close
+                label: "Menüyü kapat"
+                type: string
+          - name: hero
+            label: "Giriş bölümü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Massage Therapy & Wellness"
+                type: string
+              - name: t1
+                label: "Bedeninize bir mola,"
+                type: string
+              - name: t2
+                label: "ruhunuza bir ritüel."
+                type: string
+              - name: sub
+                label: "Mireya’da her seans; sıcak ahşap, yumuşak ışık ve uz…"
+                type: text
+              - name: cta1
+                label: "Randevu Al"
+                type: string
+              - name: cta2
+                label: "Masaj Menüsü"
+                type: string
+              - name: badge
+                label: "Kişiye özel terapi odaları"
+                type: string
+              - name: scroll
+                label: "Keşfet"
+                type: string
+          - name: about
+            label: "Hakkımızda"
+            type: object
+            fields:
+              - name: kicker
+                label: "Hakkımızda"
+                type: string
+              - name: t1
+                label: "Şehrin ortasında"
+                type: string
+              - name: t2
+                label: "sessiz bir sığınak."
+                type: string
+              - name: p1
+                label: "Mireya, günün temposundan sıyrılıp kendinize dönebil…"
+                type: text
+              - name: p2
+                label: "Deneyimli terapistlerimiz her seansa kısa bir danışm…"
+                type: text
+              - name: f1t
+                label: "Uzman terapistler"
+                type: string
+              - name: f1d
+                label: "Sertifikalı, deneyimli ve güler yüzlü ekip."
+                type: string
+              - name: f2t
+                label: "Kusursuz hijyen"
+                type: string
+              - name: f2d
+                label: "Her misafir için yeni havlu ve sterilize alan."
+                type: string
+              - name: f3t
+                label: "Premium doğal yağlar"
+                type: string
+              - name: f3d
+                label: "Soğuk sıkım bitkisel ve saf esansiyel yağlar."
+                type: string
+              - name: f4t
+                label: "Özel odalar"
+                type: string
+              - name: f4d
+                label: "Tek kişilik ve çiftlere özel sakin odalar."
+                type: string
+              - name: sign
+                label: "Mireya Ekibi"
+                type: string
+          - name: rituals
+            label: "İmza Ritüeller"
+            type: object
+            fields:
+              - name: kicker
+                label: "İmza Ritüeller"
+                type: string
+              - name: t1
+                label: "Mireya’nın"
+                type: string
+              - name: t2
+                label: "en sevilenleri"
+                type: string
+              - name: lead
+                label: "Misafirlerimizin tekrar tekrar döndüğü, özenle kurgu…"
+                type: string
+              - name: choose
+                label: "Bu ritüeli seç"
+                type: string
+              - name: from
+                label: "{p} ve üzeri"
+                type: string
+          - name: menu
+            label: "Masaj Menüsü"
+            type: object
+            fields:
+              - name: kicker
+                label: "Masaj Menüsü"
+                type: string
+              - name: t1
+                label: "Size iyi gelecek"
+                type: string
+              - name: t2
+                label: "dokunuşu seçin"
+                type: string
+              - name: lead
+                label: "Kararsız mısınız? Terapistimiz seans öncesinde size …"
+                type: text
+              - name: cat_classic
+                label: "Klasik & Terapötik"
+                type: string
+              - name: cat_eastern
+                label: "Uzakdoğu & Aromatik"
+                type: string
+              - name: cat_signature
+                label: "Özel & İmza"
+                type: string
+              - name: min
+                label: "dk"
+                type: string
+              - name: book
+                label: "Seç"
+                type: string
+              - name: note
+                label: "Size en uygun masajı ve seans süresini birlikte beli…"
+                type: text
+          - name: journey
+            label: "Deneyim adımları"
+            type: object
+            fields:
+              - name: kicker
+                label: "Deneyim"
+                type: string
+              - name: t1
+                label: "Kapıdan girdiğiniz"
+                type: string
+              - name: t2
+                label: "andan itibaren"
+                type: string
+              - name: s1t
+                label: "Karşılama"
+                type: string
+              - name: s1d
+                label: "Bitki çayı ve sıcak havlu ile lounge’da kısa bir nefes."
+                type: string
+              - name: s2t
+                label: "Danışma"
+                type: string
+              - name: s2d
+                label: "Beklentinizi, hassas bölgeleri ve tercih ettiğiniz b…"
+                type: string
+              - name: s3t
+                label: "Terapi"
+                type: string
+              - name: s3d
+                label: "Loş ışık, sakin müzik ve size özel seçilmiş yağlarla…"
+                type: string
+              - name: s4t
+                label: "Dinlenme"
+                type: string
+              - name: s4d
+                label: "Seans sonrası acele etmeden, kendi ritminizde dönüş."
+                type: string
+          - name: gallery
+            label: "Galeri"
+            type: object
+            fields:
+              - name: kicker
+                label: "Galeri"
+                type: string
+              - name: t1
+                label: "Mireya’dan"
+                type: string
+              - name: t2
+                label: "kareler"
+                type: string
+              - name: close
+                label: "Kapat"
+                type: string
+              - name: prev
+                label: "Önceki"
+                type: string
+              - name: next
+                label: "Sonraki"
+                type: string
+          - name: reviews
+            label: "Yorumlar"
+            type: object
+            fields:
+              - name: kicker
+                label: "Misafir Yorumları"
+                type: string
+              - name: t1
+                label: "Onların"
+                type: string
+              - name: t2
+                label: "sözleriyle"
+                type: string
+              - name: sample
+                label: "Örnek yorumlar — yayın öncesi önizleme"
+                type: string
+              - name: write
+                label: "Google’da yorum yazın"
+                type: string
+              - name: prev
+                label: "Önceki yorum"
+                type: string
+              - name: next
+                label: "Sonraki yorum"
+                type: string
+          - name: book
+            label: "Rezervasyon ve form"
+            type: object
+            fields:
+              - name: kicker
+                label: "Rezervasyon"
+                type: string
+              - name: t1
+                label: "Zamanınızı"
+                type: string
+              - name: t2
+                label: "ayıralım"
+                type: string
+              - name: lead
+                label: "Formu doldurun, talebiniz WhatsApp üzerinden bize ul…"
+                type: text
+              - name: leadCal
+                label: "Size uygun gün ve saati seçin; randevunuz anında tak…"
+                type: text
+              - name: name
+                label: "Ad Soyad"
+                type: string
+              - name: phone
+                label: "Telefon"
+                type: string
+              - name: service
+                label: "Hizmet"
+                type: string
+              - name: servicePh
+                label: "Masaj seçin"
+                type: string
+              - name: date
+                label: "Tarih"
+                type: string
+              - name: time
+                label: "Saat"
+                type: string
+              - name: timePh
+                label: "Saat seçin"
+                type: string
+              - name: guests
+                label: "Kişi sayısı"
+                type: string
+              - name: g1
+                label: "1 kişi"
+                type: string
+              - name: g2
+                label: "2 kişi (çift)"
+                type: string
+              - name: note
+                label: "Not"
+                type: string
+              - name: notePh
+                label: "Hassas bölgeler, terapist tercihi vb."
+                type: string
+              - name: submit
+                label: "Randevu Talebi Gönder"
+                type: string
+              - name: direct
+                label: "Doğrudan WhatsApp’tan yazın"
+                type: string
+              - name: privacy
+                label: "Bilgileriniz yalnızca randevunuz için kullanılır."
+                type: string
+              - name: errRequired
+                label: "Lütfen bu alanı doldurun."
+                type: string
+              - name: errPhone
+                label: "Geçerli bir telefon numarası girin."
+                type: string
+              - name: errDate
+                label: "Geçmiş bir tarih seçilemez."
+                type: string
+              - name: ok
+                label: "Teşekkürler! Talebiniz alındı, en kısa sürede sizinl…"
+                type: text
+              - name: okWa
+                label: "Mesajınız hazır — göndermek için WhatsApp’ı açın:"
+                type: string
+              - name: soon
+                label: "Online rezervasyon çok yakında aktif olacak. Şimdili…"
+                type: text
+              - name: fail
+                label: "Gönderilemedi. Lütfen tekrar deneyin ya da WhatsApp’…"
+                type: string
+              - name: msgIntro
+                label: "Merhaba Mireya, randevu talebim:"
+                type: string
+          - name: contact
+            label: "İletişim"
+            type: object
+            fields:
+              - name: kicker
+                label: "İletişim"
+                type: string
+              - name: t1
+                label: "Sizi"
+                type: string
+              - name: t2
+                label: "bekliyoruz"
+                type: string
+              - name: address
+                label: "Adres"
+                type: string
+              - name: hours
+                label: "Çalışma saatleri"
+                type: string
+              - name: weekdays
+                label: "Hafta içi"
+                type: string
+              - name: weekend
+                label: "Hafta sonu"
+                type: string
+              - name: phone
+                label: "Telefon & WhatsApp"
+                type: string
+              - name: follow
+                label: "Bizi takip edin"
+                type: string
+              - name: soon
+                label: "Çok yakında"
+                type: string
+              - name: directions
+                label: "Yol tarifi al"
+                type: string
+          - name: footer
+            label: "Alt bilgi"
+            type: object
+            fields:
+              - name: tag
+                label: "Kendinize ayırdığınız en güzel zaman."
+                type: string
+              - name: rights
+                label: "Tüm hakları saklıdır."
+                type: string
+          - name: wa
+            label: "WhatsApp butonu"
+            type: object
+            fields:
+              - name: float
+                label: "WhatsApp ile yazın"
+                type: string
+
+  - name: site
+    label: "Görünüm ve Bölümler"
+    type: file
+    path: content/site.json
+    fields:
+      - name: defaultLang
+        label: "Sitenin açılış dili"
+        type: select
+        options:
+          values:
+            - value: sq
+              label: "Arnavutça"
+            - value: sr
+              label: "Sırpça"
+            - value: en
+              label: "İngilizce"
+            - value: tr
+              label: "Türkçe"
+      - name: announcement
+        label: "Duyuru şeridi (sitenin en üstünde)"
+        type: object
+        fields:
+          - name: enabled
+            label: "Duyuruyu göster"
+            type: boolean
+          - name: text
+            label: "Duyuru metni"
+            type: object
+            fields:
+              - name: sq
+                label: "Arnavutça"
+                type: string
+              - name: sr
+                label: "Sırpça"
+                type: string
+              - name: en
+                label: "İngilizce"
+                type: string
+              - name: tr
+                label: "Türkçe"
+                type: string
+          - name: link
+            label: "Tıklanınca gidilecek link (isteğe bağlı)"
             type: string
-          - name: hero_t2
-            label: "Giriş başlığı – 2. satır (altın renk)"
+            description: "Örnek: #booking (randevu bölümü) ya da tam bir web adresi"
+      - name: sections
+        label: "Bölümleri göster / gizle"
+        type: object
+        fields:
+          - name: marquee
+            label: "Kayan masaj isimleri şeridi"
+            type: boolean
+          - name: about
+            label: "Hakkımızda"
+            type: boolean
+          - name: rituals
+            label: "İmza Ritüeller"
+            type: boolean
+          - name: menu
+            label: "Masaj Menüsü"
+            type: boolean
+          - name: journey
+            label: "Deneyim adımları"
+            type: boolean
+          - name: gallery
+            label: "Galeri"
+            type: boolean
+          - name: reviews
+            label: "Yorumlar"
+            type: boolean
+          - name: booking
+            label: "Rezervasyon"
+            type: boolean
+          - name: contact
+            label: "İletişim ve harita"
+            type: boolean
+      - name: stats
+        label: "Giriş bölümündeki rakamlar"
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: "Rakam"
             type: string
-          - name: hero_sub
-            label: "Giriş alt yazısı"
-            type: text
-          - name: about_t1
-            label: "Hakkımızda başlığı – 1. kısım"
-            type: string
-          - name: about_t2
-            label: "Hakkımızda başlığı – 2. kısım (altın renk)"
-            type: string
-          - name: about_p1
-            label: "Hakkımızda – 1. paragraf"
-            type: text
-          - name: about_p2
-            label: "Hakkımızda – 2. paragraf"
-            type: text
-          - name: menu_note
-            label: "Masaj menüsü alt notu"
-            type: text
+            description: "Boş bırakılırsa sitedeki masaj sayısı otomatik yazılır"
+          - name: label
+            label: "Açıklama"
+            type: object
+            fields:
+              - name: sq
+                label: "Arnavutça"
+                type: string
+              - name: sr
+                label: "Sırpça"
+                type: string
+              - name: en
+                label: "İngilizce"
+                type: string
+              - name: tr
+                label: "Türkçe"
+                type: string
+      - name: appearance
+        label: "Görünüm"
+        type: object
+        fields:
+          - name: accent
+            label: "Vurgu rengi"
+            type: select
+            options:
+              values:
+                - value: gold
+                  label: "Altın (varsayılan)"
+                - value: champagne
+                  label: "Şampanya"
+                - value: rose
+                  label: "Gül altını"
+                - value: bronze
+                  label: "Bronz"
+          - name: animations
+            label: "Kaydırma animasyonları"
+            type: boolean
+          - name: heroVideo
+            label: "Girişte logo videosunu oynat"
+            type: boolean
+          - name: whatsappButton
+            label: "Sağ alttaki WhatsApp butonu"
+            type: boolean
