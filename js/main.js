@@ -143,9 +143,12 @@
       a.hidden = !maps;
       if (maps) a.href = maps.page;
     });
+    // Review link from the panel; otherwise the Google listing, where "Write a review" is one tap away
+    const reviewUrl = /^https?:\/\//.test(CONFIG.googleReviewUrl || '') ? CONFIG.googleReviewUrl
+      : (String(CONFIG.googleMapsCid || '').trim() ? maps && maps.page : '');
     document.querySelectorAll('[data-google-review]').forEach((a) => {
-      a.hidden = !CONFIG.googleReviewUrl;
-      if (CONFIG.googleReviewUrl) a.href = CONFIG.googleReviewUrl;
+      a.hidden = !reviewUrl;
+      if (reviewUrl) a.href = reviewUrl;
     });
 
     const socials = [
