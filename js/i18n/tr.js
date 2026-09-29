@@ -91,6 +91,7 @@ window.MIREYA_I18N.tr = {
   'reviews.t1': 'Onların',
   'reviews.t2': 'sözleriyle',
   'reviews.sample': 'Örnek yorumlar — yayın öncesi önizleme',
+  'reviews.write': 'Google’da yorum yazın',
   'reviews.prev': 'Önceki yorum',
   'reviews.next': 'Sonraki yorum',
 

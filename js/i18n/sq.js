@@ -91,6 +91,7 @@ window.MIREYA_I18N.sq = {
   'reviews.t1': 'Me fjalët',
   'reviews.t2': 'e tyre',
   'reviews.sample': 'Përshtypje shembull — parapamje para publikimit',
+  'reviews.write': 'Shkruani një vlerësim në Google',
   'reviews.prev': 'Përshtypja e mëparshme',
   'reviews.next': 'Përshtypja e radhës',
 

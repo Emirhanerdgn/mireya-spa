@@ -32,6 +32,14 @@ content:
         label: "Harita araması"
         type: string
         description: "Google Haritalarda aranacak adres"
+      - name: googleMapsCid
+        label: "Google Haritalar işletme kimliği"
+        type: string
+        description: "Haritada salonun Google kaydını gösterir. Değiştirmeyin."
+      - name: googleReviewUrl
+        label: "Google yorum linki"
+        type: string
+        description: "Google İşletme Profili > Daha fazla yorum alın > paylaşım linki"
       - name: hoursWeekdays
         label: "Çalışma saatleri – hafta içi"
         type: string

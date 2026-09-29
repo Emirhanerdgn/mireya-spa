@@ -91,6 +91,7 @@ window.MIREYA_I18N.sr = {
   'reviews.t1': 'Njihovim',
   'reviews.t2': 'rečima',
   'reviews.sample': 'Primeri utisaka — pregled pre objavljivanja',
+  'reviews.write': 'Ostavite recenziju na Google-u',
   'reviews.prev': 'Prethodni utisak',
   'reviews.next': 'Sledeći utisak',
 

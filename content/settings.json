@@ -5,10 +5,12 @@
   "instagram": "",
   "facebook": "",
   "address": "18 17 Shkurti, Fushë-Kosovë 12000",
-  "mapQuery": "17 Shkurti 18, Fushë Kosovë 12000, Kosovo",
+  "mapQuery": "Mireya Massage, 18 17 Shkurti, Fushë Kosovë 12000",
   "hoursWeekdays": "",
   "hoursWeekend": "",
   "bookingOpen": "10:00",
   "bookingClose": "22:00",
-  "showPricing": false
+  "showPricing": false,
+  "googleMapsCid": "11214839970247590779",
+  "googleReviewUrl": ""
 }

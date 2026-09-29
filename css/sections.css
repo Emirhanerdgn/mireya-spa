@@ -243,6 +243,8 @@
 .review cite { font-style: normal; font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-light); }
 .lang-tag { padding: 0.1rem 0.5rem; border: 1px solid var(--line-strong); font-size: 0.62rem; letter-spacing: 0.16em; color: var(--muted); }
 .review-controls { display: flex; justify-content: center; align-items: center; gap: 1.6rem; margin-top: 3rem; }
+.review-cta { margin: 2.6rem 0 0; text-align: center; }
+.review-cta .ico { width: 16px; height: 16px; }
 .review-dots { display: flex; gap: 0.55rem; }
 .dot { width: 8px; height: 8px; border-radius: 4px; border: 1px solid var(--gold); transition: width var(--dur) var(--ease-out), background var(--dur); }
 .dot[aria-current="true"] { width: 28px; background: var(--gold); }

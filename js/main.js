@@ -138,10 +138,14 @@
       n.classList.remove('is-pending');
     });
 
-    const mapQuery = CONFIG.mapQuery || CONFIG.address;
+    const maps = mapLinks();
     document.querySelectorAll('[data-contact="directions"]').forEach((a) => {
-      a.hidden = !mapQuery;
-      if (mapQuery) a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery);
+      a.hidden = !maps;
+      if (maps) a.href = maps.page;
+    });
+    document.querySelectorAll('[data-google-review]').forEach((a) => {
+      a.hidden = !CONFIG.googleReviewUrl;
+      if (CONFIG.googleReviewUrl) a.href = CONFIG.googleReviewUrl;
     });
 
     const socials = [
@@ -151,12 +155,29 @@
     document.querySelectorAll('[data-contact="socials"]').forEach((n) => n.replaceChildren(...socials));
   }
 
+  // Prefer the Google Business listing (shows the salon's name and reviews on the map)
+  function mapLinks() {
+    const cid = String(CONFIG.googleMapsCid || '').replace(/\D/g, '');
+    if (cid) {
+      return {
+        page: 'https://www.google.com/maps?cid=' + cid,
+        embed: 'https://maps.google.com/maps?cid=' + cid + '&output=embed'
+      };
+    }
+    const query = CONFIG.mapQuery || CONFIG.address;
+    if (!query) return null;
+    return {
+      page: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query),
+      embed: 'https://www.google.com/maps?q=' + encodeURIComponent(query) + '&output=embed'
+    };
+  }
+
   function renderMap() {
     const frame = document.querySelector('[data-map]');
-    const mapQuery = CONFIG.mapQuery || CONFIG.address;
-    if (!frame || !mapQuery) return;
+    const maps = mapLinks();
+    if (!frame || !maps) return;
     frame.replaceChildren(R.el('iframe', {
-      src: 'https://www.google.com/maps?q=' + encodeURIComponent(mapQuery) + '&output=embed',
+      src: maps.embed,
       title: 'Mireya map', loading: 'lazy', referrerpolicy: 'no-referrer-when-downgrade'
     }));
   }

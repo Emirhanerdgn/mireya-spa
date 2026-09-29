@@ -91,6 +91,7 @@ window.MIREYA_I18N.en = {
   'reviews.t1': 'In their',
   'reviews.t2': 'own words',
   'reviews.sample': 'Sample reviews — pre-launch preview',
+  'reviews.write': 'Write a review on Google',
   'reviews.prev': 'Previous review',
   'reviews.next': 'Next review',
 
