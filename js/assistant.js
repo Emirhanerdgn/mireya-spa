@@ -153,7 +153,7 @@
     history = [...history, { role: 'assistant', content: reply }].slice(-MAX_HISTORY);
     busy = false;
     sendBtn.disabled = false;
-    input.focus();
+    if (finePointer()) input.focus();
   }
 
   /* ---------- Teaser ---------- */
@@ -174,6 +174,8 @@
     if (!teaserClose.contains(e.target)) setOpen(true);
   });
 
+  const finePointer = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   /* ---------- Open / close & language ---------- */
   function setOpen(open) {
     panel.hidden = !open;
@@ -182,7 +184,8 @@
     if (open) {
       hideTeaser();
       if (!log.childElementCount) bubble('assistant', t('ai.greeting'));
-      setTimeout(() => input.focus(), 50);
+      // Telefonda klavye yalnızca yazı kutusuna dokununca açılır.
+      if (finePointer()) setTimeout(() => input.focus(), 50);
     }
   }
 
