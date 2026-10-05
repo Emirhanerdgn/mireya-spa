@@ -280,7 +280,7 @@ html.has-announce { --announce-h: 2.1rem; }
 .nav-open .nav-toggle span:first-child { transform: translateY(4px) rotate(45deg); }
 .nav-open .nav-toggle span:last-child { transform: translateY(-4px) rotate(-45deg); left: 10px; }
 
-@media (max-width: 1240px) {
+@media (max-width: 1380px) {
   .main-nav {
     position: fixed;
     inset: 0;

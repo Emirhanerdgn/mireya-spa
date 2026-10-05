@@ -9,7 +9,8 @@
     "gallery": true,
     "reviews": true,
     "booking": true,
-    "contact": true
+    "contact": true,
+    "instagram": true
   },
   "stats": [
     {

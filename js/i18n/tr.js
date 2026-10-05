@@ -181,6 +181,13 @@ window.MIREYA_I18N.tr = {
   'ai.r.who': 'Ben Mireya’nın dijital asistanıyım. Sık sorulan sorulara anında cevap veriyorum; özel bir konu için ekibimize WhatsApp’tan ulaşabilirsiniz.',
   'ai.r.howareyou': 'Çok iyiyim, teşekkür ederim! Size nasıl yardımcı olabilirim?',
   'ai.r.bye': 'Görüşmek üzere! Sizi Mireya’da ağırlamayı dört gözle bekliyoruz.',
+  'insta.kicker': 'Instagram',
+  'insta.t1': 'Bizi Instagram’da',
+  'insta.t2': 'takip edin',
+  'insta.lead': 'Salondan kareler, yeni ritüeller ve özel kampanyalar ilk önce Instagram’da.',
+  'insta.cta': 'Instagram’da takip et',
+  'insta.hero': 'Instagram’da bizi takip edin',
+
   'svc.swedish.name': 'İsveç Masajı',
   'svc.swedish.desc': 'Uzun, akıcı hareketlerle tüm vücudu gevşeten klasik masaj; dolaşımı hızlandırır, stresi alır.',
   'svc.deep.name': 'Derin Doku Masajı',

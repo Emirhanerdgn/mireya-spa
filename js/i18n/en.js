@@ -181,6 +181,13 @@ window.MIREYA_I18N.en = {
   'ai.r.who': 'I’m Mireya’s digital assistant. I answer common questions instantly; for anything specific you can reach our team on WhatsApp.',
   'ai.r.howareyou': 'I’m very well, thank you! How can I help you?',
   'ai.r.bye': 'See you soon! We look forward to welcoming you at Mireya.',
+  'insta.kicker': 'Instagram',
+  'insta.t1': 'Follow us',
+  'insta.t2': 'on Instagram',
+  'insta.lead': 'Moments from the salon, new rituals and special offers, first on Instagram.',
+  'insta.cta': 'Follow on Instagram',
+  'insta.hero': 'Follow us on Instagram',
+
   'svc.swedish.name': 'Swedish Massage',
   'svc.swedish.desc': 'The classic full-body massage with long, flowing strokes — boosts circulation and melts stress.',
   'svc.deep.name': 'Deep Tissue Massage',

@@ -181,6 +181,13 @@ window.MIREYA_I18N.sr = {
   'ai.r.who': 'Ja sam digitalni asistent Mireye. Odmah odgovaram na česta pitanja; za nešto posebno možete kontaktirati naš tim preko WhatsApp-a.',
   'ai.r.howareyou': 'Odlično, hvala! Kako mogu da pomognem?',
   'ai.r.bye': 'Vidimo se! Radujemo se vašem dolasku u Mireyu.',
+  'insta.kicker': 'Instagram',
+  'insta.t1': 'Pratite nas',
+  'insta.t2': 'na Instagramu',
+  'insta.lead': 'Trenuci iz salona, novi rituali i posebne ponude, prvo na Instagramu.',
+  'insta.cta': 'Zapratite na Instagramu',
+  'insta.hero': 'Pratite nas na Instagramu',
+
   'svc.swedish.name': 'Švedska masaža',
   'svc.swedish.desc': 'Klasična masaža celog tela dugim, tečnim pokretima — poboljšava cirkulaciju i uklanja stres.',
   'svc.deep.name': 'Masaža dubokog tkiva',

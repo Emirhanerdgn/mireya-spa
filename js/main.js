@@ -140,6 +140,33 @@
     });
   }
 
+  const INSTA_TILES = 6;
+
+  function instagramHandle(url) {
+    const m = String(url || '').match(/instagram\.com\/([A-Za-z0-9._-]+)/i);
+    return m ? '@' + m[1] : '';
+  }
+
+  function renderInstagram() {
+    const url = CONFIG.instagram;
+    const handle = instagramHandle(url);
+    document.querySelectorAll('[data-insta-link]').forEach((a) => {
+      a.hidden = !url;
+      if (url) a.href = url;
+    });
+    document.querySelectorAll('[data-insta-handle]').forEach((n) => { n.textContent = handle; });
+    const section = document.querySelector('[data-insta]');
+    if (!section) return;
+    if (!url) { section.hidden = true; return; } // the panel can also hide it (boot.js)
+    const mosaic = section.querySelector('[data-insta-mosaic]');
+    mosaic.replaceChildren(...DATA.gallery.slice(0, INSTA_TILES).map((g) => R.el('a', {
+      class: 'insta-tile', href: url, target: '_blank', rel: 'noopener', 'aria-label': 'Instagram ' + handle
+    }, [
+      R.el('img', { src: g.src, alt: '', loading: 'lazy' }),
+      R.el('span', { class: 'insta-tile-icon', 'aria-hidden': 'true' }, [R.icon('i-ig')])
+    ])));
+  }
+
   function renderContact() {
     setContact('address', CONFIG.address);
     setContact('weekdays', CONFIG.hoursWeekdays);
@@ -166,6 +193,7 @@
     });
 
     renderSocial();
+    renderInstagram();
   }
 
   // Prefer the Google Business listing (shows the salon's name and reviews on the map)

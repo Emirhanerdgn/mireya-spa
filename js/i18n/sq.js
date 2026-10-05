@@ -181,6 +181,13 @@ window.MIREYA_I18N.sq = {
   'ai.r.who': 'Jam asistenti digjital i Mireya. U përgjigjem menjëherë pyetjeve të shpeshta; për diçka të veçantë mund të kontaktoni ekipin në WhatsApp.',
   'ai.r.howareyou': 'Shumë mirë, faleminderit! Si mund t’ju ndihmoj?',
   'ai.r.bye': 'Mirupafshim! Mezi presim t’ju mirëpresim te Mireya.',
+  'insta.kicker': 'Instagram',
+  'insta.t1': 'Na ndiqni',
+  'insta.t2': 'në Instagram',
+  'insta.lead': 'Momente nga salloni, rituale të reja dhe oferta speciale, së pari në Instagram.',
+  'insta.cta': 'Na ndiqni në Instagram',
+  'insta.hero': 'Na ndiqni në Instagram',
+
   'svc.swedish.name': 'Masazh suedez',
   'svc.swedish.desc': 'Masazhi klasik i gjithë trupit me lëvizje të gjata e të rrjedhshme — përmirëson qarkullimin dhe largon stresin.',
   'svc.deep.name': 'Masazh i indeve të thella',

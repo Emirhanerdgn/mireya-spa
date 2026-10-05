@@ -12,7 +12,7 @@
   const CONTENT_FILES = ['settings', 'images', 'services', 'gallery', 'reviews', 'ui', 'site'];
   const SECTION_TARGETS = Object.freeze({
     marquee: '.marquee', about: '#about', rituals: '#rituals', menu: '#menu', journey: '.journey',
-    gallery: '#gallery', reviews: '#reviews', booking: '#booking', contact: '#contact'
+    gallery: '#gallery', instagram: '#instagram', reviews: '#reviews', booking: '#booking', contact: '#contact'
   });
   const ACCENTS = Object.freeze({
     champagne: ['#d8c3a0', '#f3e7cf', '#a08a63', 'linear-gradient(100deg, #f7efdf 0%, #d8c3a0 45%, #a8916a 100%)'],

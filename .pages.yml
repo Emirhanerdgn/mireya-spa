@@ -645,6 +645,28 @@ content:
               - name: directions
                 label: "Yol tarifi al"
                 type: string
+          - name: insta
+            label: "Instagram bölümü"
+            type: object
+            fields:
+              - name: hero
+                label: "Giriş bölümündeki Instagram butonu"
+                type: string
+              - name: kicker
+                label: "Instagram"
+                type: string
+              - name: t1
+                label: "Bizi Instagram’da"
+                type: string
+              - name: t2
+                label: "takip edin"
+                type: string
+              - name: lead
+                label: "Salondan kareler, yeni ritüeller ve özel kampanyalar…"
+                type: text
+              - name: cta
+                label: "Instagram’da takip et"
+                type: string
           - name: footer
             label: "Alt bilgi"
             type: object
@@ -1045,6 +1067,28 @@ content:
                 type: string
               - name: directions
                 label: "Yol tarifi al"
+                type: string
+          - name: insta
+            label: "Instagram bölümü"
+            type: object
+            fields:
+              - name: hero
+                label: "Giriş bölümündeki Instagram butonu"
+                type: string
+              - name: kicker
+                label: "Instagram"
+                type: string
+              - name: t1
+                label: "Bizi Instagram’da"
+                type: string
+              - name: t2
+                label: "takip edin"
+                type: string
+              - name: lead
+                label: "Salondan kareler, yeni ritüeller ve özel kampanyalar…"
+                type: text
+              - name: cta
+                label: "Instagram’da takip et"
                 type: string
           - name: footer
             label: "Alt bilgi"
@@ -1447,6 +1491,28 @@ content:
               - name: directions
                 label: "Yol tarifi al"
                 type: string
+          - name: insta
+            label: "Instagram bölümü"
+            type: object
+            fields:
+              - name: hero
+                label: "Giriş bölümündeki Instagram butonu"
+                type: string
+              - name: kicker
+                label: "Instagram"
+                type: string
+              - name: t1
+                label: "Bizi Instagram’da"
+                type: string
+              - name: t2
+                label: "takip edin"
+                type: string
+              - name: lead
+                label: "Salondan kareler, yeni ritüeller ve özel kampanyalar…"
+                type: text
+              - name: cta
+                label: "Instagram’da takip et"
+                type: string
           - name: footer
             label: "Alt bilgi"
             type: object
@@ -1848,6 +1914,28 @@ content:
               - name: directions
                 label: "Yol tarifi al"
                 type: string
+          - name: insta
+            label: "Instagram bölümü"
+            type: object
+            fields:
+              - name: hero
+                label: "Giriş bölümündeki Instagram butonu"
+                type: string
+              - name: kicker
+                label: "Instagram"
+                type: string
+              - name: t1
+                label: "Bizi Instagram’da"
+                type: string
+              - name: t2
+                label: "takip edin"
+                type: string
+              - name: lead
+                label: "Salondan kareler, yeni ritüeller ve özel kampanyalar…"
+                type: text
+              - name: cta
+                label: "Instagram’da takip et"
+                type: string
           - name: footer
             label: "Alt bilgi"
             type: object
@@ -1932,6 +2020,9 @@ content:
             type: boolean
           - name: gallery
             label: "Galeri"
+            type: boolean
+          - name: instagram
+            label: "Instagram bölümü"
             type: boolean
           - name: reviews
             label: "Yorumlar"

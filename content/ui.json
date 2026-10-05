@@ -140,6 +140,14 @@
     },
     "wa": {
       "float": "Na shkruani në WhatsApp"
+    },
+    "insta": {
+      "kicker": "Instagram",
+      "t1": "Na ndiqni",
+      "t2": "në Instagram",
+      "lead": "Momente nga salloni, rituale të reja dhe oferta speciale, së pari në Instagram.",
+      "cta": "Na ndiqni në Instagram",
+      "hero": "Na ndiqni në Instagram"
     }
   },
   "sr": {
@@ -283,6 +291,14 @@
     },
     "wa": {
       "float": "Pišite nam na WhatsApp"
+    },
+    "insta": {
+      "kicker": "Instagram",
+      "t1": "Pratite nas",
+      "t2": "na Instagramu",
+      "lead": "Trenuci iz salona, novi rituali i posebne ponude, prvo na Instagramu.",
+      "cta": "Zapratite na Instagramu",
+      "hero": "Pratite nas na Instagramu"
     }
   },
   "en": {
@@ -426,6 +442,14 @@
     },
     "wa": {
       "float": "Chat on WhatsApp"
+    },
+    "insta": {
+      "kicker": "Instagram",
+      "t1": "Follow us",
+      "t2": "on Instagram",
+      "lead": "Moments from the salon, new rituals and special offers, first on Instagram.",
+      "cta": "Follow on Instagram",
+      "hero": "Follow us on Instagram"
     }
   },
   "tr": {
@@ -569,6 +593,14 @@
     },
     "wa": {
       "float": "WhatsApp ile yazın"
+    },
+    "insta": {
+      "kicker": "Instagram",
+      "t1": "Bizi Instagram’da",
+      "t2": "takip edin",
+      "lead": "Salondan kareler, yeni ritüeller ve özel kampanyalar ilk önce Instagram’da.",
+      "cta": "Instagram’da takip et",
+      "hero": "Instagram’da bizi takip edin"
     }
   }
 }
