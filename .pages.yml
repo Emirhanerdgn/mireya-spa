@@ -60,8 +60,9 @@ content:
         type: string
         description: "Örnek: 22:00"
       - name: instagram
-        label: "Instagram linki"
+        label: "Instagram hesabı"
         type: string
+        description: "Kullanıcı adı (örnek: mireya.massage) ya da tam link. Boşsa Instagram butonu görünmez." 
       - name: facebook
         label: "Facebook linki"
         type: string
@@ -1991,4 +1992,7 @@ content:
             type: boolean
           - name: whatsappButton
             label: "Sağ alttaki WhatsApp butonu"
+            type: boolean
+          - name: assistant
+            label: "Dijital asistan (sohbet balonu)"
             type: boolean

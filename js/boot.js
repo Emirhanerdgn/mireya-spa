@@ -21,7 +21,7 @@
   });
   const SCRIPTS = [
     'js/i18n/sq.js', 'js/i18n/sr.js', 'js/i18n/en.js', 'js/i18n/tr.js',
-    'js/i18n.js', 'js/render.js', 'js/booking.js', 'js/main.js'
+    'js/i18n.js', 'js/render.js', 'js/booking.js', 'js/main.js', 'js/assistant.js'
   ];
   const VERSION = (document.currentScript && document.currentScript.src.split('?v=')[1]) || '';
 
@@ -42,6 +42,19 @@
   }
 
   const filled = (v) => typeof v === 'string' ? v.trim() !== '' : v !== undefined && v !== null;
+
+  // Panel accepts a full link, "@name" or just "name"
+  function socialUrl(value, base) {
+    const v = String(value || '').trim();
+    if (!v) return '';
+    if (/^https?:\/\//i.test(v)) return v;
+    const handle = v.replace(/^@/, '').replace(/^(www\.)?(instagram|facebook)\.com\//i, '').replace(/\/+$/, '');
+    return /^[A-Za-z0-9._-]{1,60}$/.test(handle) ? base + handle + '/' : '';
+  }
+
+  function instagramUrl(value) {
+    return socialUrl(value, 'https://www.instagram.com/');
+  }
 
   function buildServices(list) {
     return (list || [])
@@ -114,7 +127,10 @@
       ...Object.fromEntries(Object.entries(settings).filter(([, v]) => filled(v))),
       showPricing: Boolean(settings.showPricing),
       heroVideo: look.heroVideo === false ? '' : (images.heroVideo || ''),
-      defaultLang: LANGS.includes(site.defaultLang) ? site.defaultLang : (BASE_CONFIG.defaultLang || 'sq')
+      defaultLang: LANGS.includes(site.defaultLang) ? site.defaultLang : (BASE_CONFIG.defaultLang || 'sq'),
+      assistant: look.assistant !== false,
+      instagram: instagramUrl(settings.instagram),
+      facebook: socialUrl(settings.facebook, 'https://facebook.com/')
     });
 
     window.MIREYA_DATA = Object.freeze({

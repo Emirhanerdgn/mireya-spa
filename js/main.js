@@ -126,6 +126,20 @@
     return R.el('a', { href: url, target: '_blank', rel: 'noopener', 'aria-label': label }, [R.icon(iconId)]);
   }
 
+  // Instagram / WhatsApp / Facebook buttons in header, mobile menu, contact and footer
+  function renderSocial() {
+    const wa = String(CONFIG.whatsappNumber || '').replace(/\D/g, '');
+    const links = [
+      CONFIG.instagram && ['Instagram', CONFIG.instagram, 'i-ig'],
+      wa && ['WhatsApp', 'https://wa.me/' + wa, 'i-wa'],
+      CONFIG.facebook && ['Facebook', CONFIG.facebook, 'i-fb']
+    ].filter(Boolean);
+    document.querySelectorAll('[data-social], [data-contact="socials"]').forEach((box) => {
+      box.replaceChildren(...links.map(([label, url, icon]) => socialLink(url, icon, label)));
+      box.hidden = !links.length;
+    });
+  }
+
   function renderContact() {
     setContact('address', CONFIG.address);
     setContact('weekdays', CONFIG.hoursWeekdays);
@@ -151,11 +165,7 @@
       if (reviewUrl) a.href = reviewUrl;
     });
 
-    const socials = [
-      CONFIG.instagram && socialLink(CONFIG.instagram, 'i-ig', 'Instagram'),
-      CONFIG.facebook && socialLink(CONFIG.facebook, 'i-fb', 'Facebook')
-    ].filter(Boolean);
-    document.querySelectorAll('[data-contact="socials"]').forEach((n) => n.replaceChildren(...socials));
+    renderSocial();
   }
 
   // Prefer the Google Business listing (shows the salon's name and reviews on the map)

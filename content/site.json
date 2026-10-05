@@ -54,6 +54,7 @@
     "accent": "gold",
     "animations": true,
     "heroVideo": true,
-    "whatsappButton": true
+    "whatsappButton": true,
+    "assistant": true
   }
 }

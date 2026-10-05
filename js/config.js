@@ -12,6 +12,9 @@ window.MIREYA_CONFIG = Object.freeze({
   // When set, the booking form posts here; otherwise it opens WhatsApp.
   formEndpoint: '',
 
+  // Digital assistant (Cloudflare Worker → Claude). Without an API key it answers common questions itself.
+  assistantEndpoint: 'https://mireya-assistant.yayin-worker.workers.dev/api/chat',
+
   defaultLang: 'sq',
   currency: '€'
 });
