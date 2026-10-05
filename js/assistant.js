@@ -1,39 +1,38 @@
 /*
  * Mireya digital assistant (chat widget).
- * Asks the Cloudflare Worker (Claude) when it is available; otherwise answers
- * the common questions itself. Replies are always rendered as plain text.
+ * Asks the Cloudflare Worker (Claude) when it is available; otherwise uses the
+ * built-in answers in assistant-brain.js. Replies are always rendered as plain text.
  */
 (function () {
   const CONFIG = window.MIREYA_CONFIG;
-  const DATA = window.MIREYA_DATA;
   const I18N = window.MireyaI18n;
   const R = window.MireyaRender;
+  const BRAIN = window.MireyaBrain;
   const t = (k) => I18N.t(k);
 
-  if (!CONFIG.assistant || !document.body) return;
+  if (!CONFIG.assistant || !BRAIN || !document.body) return;
 
   const MAX_HISTORY = 10;
   const REQUEST_TIMEOUT_MS = 20000;
-  const INTENTS = Object.freeze([
-    ['thanks', /faleminderit|hvala|thank|teşekkür|tesekkur|sağol|sagol/i],
-    ['booking', /rezerv|termin|randevu|book|appoint|zakaz|reserv/i],
-    ['price', /çmim|cmim|cena|cijen|fiyat|ücret|ucret|price|cost|kosht|koliko|euro|€/i],
-    ['where', /adres|ku jeni|ku ndodh|where|nerede|nerde|lokacij|lokacion|harit|map|gde|gdje|parking/i],
-    ['hours', /orar|orari|radno|working hours|open|hapur|açık|acik|kaçta|kacta|saat kaç|saatler/i],
-    ['contact', /telefon|whatsapp|numër|numer|numara|broj|phone|call|thirr|ara/i],
-    ['massage', /masazh|masaž|masaz|masaj|massage|tretman|trajtim|ritual|terapi|therapy/i],
-    ['greeting', /^\s*(përshëndetje|pershendetje|tung|mirëdita|miredita|zdravo|dobar dan|hello|hi|hey|merhaba|selam)\b/i]
-  ]);
+  const TEASER_DELAY_MS = 7000;
+  const TEASER_KEY = 'mireya-ai-teaser';
+  const REPLY_DELAY_MS = 450;
 
   let history = [];
   let aiAvailable = Boolean(CONFIG.assistantEndpoint);
   let busy = false;
 
   /* ---------- DOM ---------- */
+  const launchLabel = R.el('span', { class: 'ai-launch-label' });
+  const launchStatus = R.el('span', { class: 'ai-launch-status' });
   const launcher = R.el('button', { class: 'ai-launcher', type: 'button', 'aria-expanded': 'false' }, [
-    R.el('span', { class: 'ai-launcher-mono', 'aria-hidden': 'true', text: 'M' }),
-    R.el('span', { class: 'ai-launcher-dot', 'aria-hidden': 'true' })
+    R.el('span', { class: 'ai-launch-icon', 'aria-hidden': 'true' }, [R.icon('i-chat')]),
+    R.el('span', { class: 'ai-launch-text' }, [launchLabel, launchStatus])
   ]);
+  const teaserText = R.el('span');
+  const teaserClose = R.el('button', { class: 'ai-teaser-close', type: 'button' }, [R.icon('i-close')]);
+  const teaser = R.el('div', { class: 'ai-teaser', hidden: true }, [teaserText, teaserClose]);
+
   const log = R.el('div', { class: 'ai-log', role: 'log', 'aria-live': 'polite' });
   const chips = R.el('div', { class: 'ai-chips' });
   const input = R.el('input', { class: 'ai-input', type: 'text', maxlength: '400', autocomplete: 'off', id: 'ai-input' });
@@ -51,14 +50,18 @@
     ]),
     log, chips, form, noteEl
   ]);
-  document.body.append(launcher, panel);
+  document.body.append(teaser, launcher, panel);
 
   /* ---------- Messages ---------- */
+  function scrollDown() {
+    log.scrollTop = log.scrollHeight;
+  }
+
   function bubble(role, text, actions) {
     const node = R.el('div', { class: 'ai-msg ai-' + role }, [R.el('p', { text })]);
     if (actions && actions.length) node.append(R.el('div', { class: 'ai-actions' }, actions));
     log.append(node);
-    log.scrollTop = log.scrollHeight;
+    scrollDown();
     return node;
   }
 
@@ -67,12 +70,8 @@
       R.el('span'), R.el('span'), R.el('span')
     ]);
     log.append(node);
-    log.scrollTop = log.scrollHeight;
+    scrollDown();
     return node;
-  }
-
-  function detectIntents(text) {
-    return INTENTS.filter(([, re]) => re.test(text)).map(([name]) => name);
   }
 
   function waUrl(text) {
@@ -97,37 +96,17 @@
     return a;
   }
 
-  function actionsFor(intents) {
+  const WHATSAPP_TOPICS = Object.freeze(['price', 'contact', 'hours', 'cancel', 'payment', 'duration', 'gift', 'default']);
+
+  function actionsFor(topics) {
     const out = [];
-    if (intents.includes('booking') || intents.includes('massage')) out.push(bookButton());
-    if (intents.includes('where') && mapUrl()) out.push(linkButton(t('ai.btn.map'), mapUrl(), true));
-    if (['price', 'contact', 'hours', 'booking'].some((i) => intents.includes(i)) && waUrl()) {
+    if (topics.includes('decline')) return out;
+    if (['booking', 'massage'].some((x) => topics.includes(x))) out.push(bookButton());
+    if (topics.includes('where') && mapUrl()) out.push(linkButton(t('ai.btn.map'), mapUrl(), true));
+    if (WHATSAPP_TOPICS.some((x) => topics.includes(x)) && waUrl()) {
       out.push(linkButton(t('ai.btn.whatsapp'), waUrl(t('book.msgIntro')), true));
     }
     return out;
-  }
-
-  function massageNames() {
-    return DATA.rituals.map((r) => t('svc.' + r.id + '.name')).join(', ');
-  }
-
-  // Answers used when the AI service is not available
-  function localAnswer(intents) {
-    const first = intents[0] || 'default';
-    switch (first) {
-      case 'booking': return t('ai.r.booking');
-      case 'price': return t('ai.r.price');
-      case 'where': return t('ai.r.where').replace('{address}', CONFIG.address || '');
-      case 'hours':
-        return CONFIG.hoursWeekdays
-          ? t('ai.r.hours').replace('{hours}', CONFIG.hoursWeekdays + (CONFIG.hoursWeekend ? ' / ' + CONFIG.hoursWeekend : ''))
-          : t('ai.r.hoursUnknown');
-      case 'contact': return t('ai.r.contact').replace('{phone}', CONFIG.phoneDisplay || '');
-      case 'massage': return t('ai.r.massage').replace('{list}', massageNames());
-      case 'thanks': return t('ai.r.thanks');
-      case 'greeting': return t('ai.r.greeting');
-      default: return t('ai.r.default');
-    }
   }
 
   async function askAI(messages) {
@@ -151,6 +130,8 @@
     }
   }
 
+  const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
   async function send(text) {
     const clean = String(text || '').trim().slice(0, 400);
     if (!clean || busy) return;
@@ -161,16 +142,37 @@
     bubble('user', clean);
     history = [...history, { role: 'user', content: clean }].slice(-MAX_HISTORY);
 
-    const intents = detectIntents(clean);
+    const local = BRAIN.answer(clean);
     const dots = typing();
-    const reply = (aiAvailable && await askAI(history)) || localAnswer(intents);
+    const aiReply = aiAvailable ? await askAI(history) : null;
+    if (!aiReply) await pause(REPLY_DELAY_MS);
+    const reply = aiReply || local.text;
+    const topics = local.topics.length ? local.topics : ['default'];
     dots.remove();
-    bubble('assistant', reply, actionsFor(intents));
+    bubble('assistant', reply, actionsFor(topics));
     history = [...history, { role: 'assistant', content: reply }].slice(-MAX_HISTORY);
     busy = false;
     sendBtn.disabled = false;
     input.focus();
   }
+
+  /* ---------- Teaser ---------- */
+  function teaserSeen() {
+    try { return sessionStorage.getItem(TEASER_KEY) === '1'; } catch (e) { return false; }
+  }
+
+  function hideTeaser() {
+    teaser.hidden = true;
+    try { sessionStorage.setItem(TEASER_KEY, '1'); } catch (e) { /* storage blocked: teaser may show again */ }
+  }
+
+  if (!teaserSeen()) {
+    setTimeout(() => { if (panel.hidden && !teaserSeen()) teaser.hidden = false; }, TEASER_DELAY_MS);
+  }
+  teaser.addEventListener('click', (e) => {
+    hideTeaser();
+    if (!teaserClose.contains(e.target)) setOpen(true);
+  });
 
   /* ---------- Open / close & language ---------- */
   function setOpen(open) {
@@ -178,6 +180,7 @@
     launcher.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('ai-open', open);
     if (open) {
+      hideTeaser();
       if (!log.childElementCount) bubble('assistant', t('ai.greeting'));
       setTimeout(() => input.focus(), 50);
     }
@@ -191,7 +194,11 @@
   }
 
   function applyLanguage() {
+    launchLabel.textContent = t('ai.launch');
+    launchStatus.textContent = t('ai.online');
     launcher.setAttribute('aria-label', t('ai.open'));
+    teaserText.textContent = t('ai.teaser');
+    teaserClose.setAttribute('aria-label', t('ai.close'));
     titleEl.textContent = t('ai.title');
     statusEl.textContent = t('ai.status');
     input.placeholder = t('ai.placeholder');

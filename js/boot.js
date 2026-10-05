@@ -21,7 +21,7 @@
   });
   const SCRIPTS = [
     'js/i18n/sq.js', 'js/i18n/sr.js', 'js/i18n/en.js', 'js/i18n/tr.js',
-    'js/i18n.js', 'js/render.js', 'js/booking.js', 'js/main.js', 'js/assistant.js'
+    'js/i18n.js', 'js/render.js', 'js/booking.js', 'js/main.js', 'js/assistant-brain.js', 'js/assistant.js'
   ];
   const VERSION = (document.currentScript && document.currentScript.src.split('?v=')[1]) || '';
 
