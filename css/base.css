@@ -53,6 +53,9 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+/* Çift dokunuşla yakınlaştırma kapalı: artı/eksi gibi düğmelere art arda basınca sayfa büyümesin. İki parmakla yakınlaştırma açık kalır. */
+html { touch-action: manipulation; }
+
 html { --announce-h: 0px; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + var(--announce-h) - 10px); -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
